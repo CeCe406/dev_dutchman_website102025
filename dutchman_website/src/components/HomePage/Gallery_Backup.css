@@ -1,0 +1,554 @@
+/*Mobile UI Design*/
+
+.gallery-title {
+    position: sticky;
+    top: 0;
+    background: #D3EAE4;
+    color: var(--color-deepgreen, #2F5848);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 100;
+    border-bottom: 1px solid #964F33;
+}
+
+.gallery-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: #FFFFFF;
+    min-height: 100vh;
+}
+
+/* container for main gallery */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    width: 100%;
+    height: 100%;
+    background: #D3EAE4;
+
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    padding: 0 1em 0;
+}
+
+
+/* sidebar with thumbnails of images user can click on */
+/*
+.sidebar {
+    background: var(--color-green);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #964F33;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: #D3EAE4;
+}
+*/
+
+/* main image container */
+.main-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-mint);
+    position: relative;
+    padding: 1rem;
+}
+
+.main-image {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    border: 3px solid var(--color-clay);
+}
+
+/* buttons to move between images */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.nav-button:hover {
+    background: rgba(2, 2, 2, 0.8);
+}
+
+.nav-button.left {
+    left: 16px;
+}
+
+.nav-button.right {
+    right: 16px;
+}
+
+/* Thumbnails */
+
+.thumbnails {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 0.25em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    gap: 0.5rem;
+}
+
+.thumbnail {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border 0.25s ease, transform 0.2s ease;
+    background: var(--color-beige);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail:hover {
+    border: 3px solid var(--color-clay);
+    transform: scale(1.05);
+}
+
+.thumbnail.active {
+    border: 3px solid var(--color-mint);
+    box-shadow: 0 0 6px var(--color-mint);
+}
+
+
+.gallery-wrapper {
+    text-align: center;
+}
+
+.gallery-title {
+    position: sticky;
+    top: 0;
+    background: #D3EAE4;
+    color: var(--color-deepgreen, #2F5848);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    z-index: 100;
+    border-bottom: 1px solid #964F33;
+}
+
+
+.divider {
+    width: 90%;
+    max-width: 1200px;
+    height: 2px;
+    background: #964F33;
+    margin: 2rem 0;
+    border-radius: 1px;
+}
+
+.text-section {
+    padding: 2rem;
+    background: #D3EAE4;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    color: #020202ff;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: 1.6;
+}
+
+.access-points {
+    padding: 1rem;
+    background: #D3EAE4;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    color: #020202ff;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+.access-points-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    background: var(--color-mint);
+    position: relative;
+    padding: 1rem;
+}
+
+.access-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    border: 3px solid var(--color-clay);
+}
+
+.access-points h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #2F5848;
+
+    border-bottom: 2px solid #964F33;
+
+    padding-bottom: 0.25rem;
+}
+
+/* I think this is better left out -Brady */
+/* .text-section:hover {
+    
+    transform: translateY(-2px);
+} */
+
+.text-section h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #2F5848;
+
+    border-bottom: 2px solid #964F33;
+
+    padding-bottom: 0.25rem;
+}
+
+
+.text-section p {
+    margin: 0;
+    line-height: 1.6;
+    color: #020202ff;
+    font-size: 1rem;
+}
+
+.text-section span.highlight {
+    background: #964F33;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/*Desktop UI Design*/
+
+@media (min-width: 740px){
+    /* container for whole page */
+    .gallery-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 2rem;
+        background: #FFFFFF;
+        min-height: 100vh;
+    }
+
+    /* container for main gallery */
+    .gallery-container {
+        display: flex;
+        flex-direction: row;
+        min-height: 600px;
+        width: 100%;
+        height: 100%;
+        background: #D3EAE4;
+
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+
+    /* sidebar with thumbnails of images user can click on */
+    .sidebar {
+        background: var(--color-green);
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-height: 80vh;
+        overflow-y: auto;
+        border-radius: 8px;
+    }
+
+
+    .sidebar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background-color: #964F33;
+        border-radius: 4px;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        background-color: #D3EAE4;
+    }
+
+    /* main image container */
+    .main-image-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-mint);
+        position: relative;
+        padding: 1rem;
+    }
+
+    .main-image {
+        max-width: 90%;
+        max-height: 85vh;
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+        border: 3px solid var(--color-clay);
+    }
+
+    /* buttons to move between images */
+    .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: background 0.2s;
+    }
+
+    .nav-button:hover {
+        background: rgba(2, 2, 2, 0.8);
+    }
+
+    .nav-button.left {
+        left: 16px;
+    }
+
+    .nav-button.right {
+        right: 16px;
+    }
+
+    /* Thumbnails */
+    .thumbnails {
+        width: 120px;
+        height: 100%;
+        max-height: 550px;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-left: 1rem;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .thumbnail {
+        width: 90px;
+        height: 90px;
+        border-radius: 8px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 3px solid transparent;
+        transition: border 0.25s ease, transform 0.2s ease;
+        background: var(--color-beige);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .thumbnail:hover {
+        border: 3px solid var(--color-clay);
+        transform: scale(1.05);
+    }
+
+    .thumbnail.active {
+        border: 3px solid var(--color-mint);
+        box-shadow: 0 0 6px var(--color-mint);
+    }
+
+    .gallery-title {
+        position: sticky;
+        top: 0;
+        background: #D3EAE4;
+        color: var(--color-deepgreen, #2F5848);
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        z-index: 100;
+        border-bottom: 1px solid #964F33;
+    }
+
+
+    .divider {
+        width: 90%;
+        max-width: 1200px;
+        height: 2px;
+        background: #964F33;
+        margin: 2rem 0;
+        border-radius: 1px;
+    }
+
+    .text-section {
+        padding: 2rem;
+        background: #D3EAE4;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        color: #020202ff;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        line-height: 1.6;
+    }
+
+    .access-points {
+        padding: 1rem;
+        background: #D3EAE4;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        color: #020202ff;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.6;
+    }
+
+    .access-points-images {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        background: var(--color-mint);
+        position: relative;
+        padding: 1rem;
+    }
+
+    .access-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+        border: 3px solid var(--color-clay);
+    }
+
+    .access-points h2 {
+        margin: 0;
+        font-size: 1.8rem;
+        color: #2F5848;
+
+        border-bottom: 2px solid #964F33;
+
+        padding-bottom: 0.25rem;
+    }
+
+    /* I think this is better left out -Brady */
+    /* .text-section:hover {
+        
+        transform: translateY(-2px);
+    } */
+
+    .text-section h2 {
+        margin: 0;
+        font-size: 1.8rem;
+        color: #2F5848;
+
+        border-bottom: 2px solid #964F33;
+
+        padding-bottom: 0.25rem;
+    }
+
+
+    .text-section p {
+        margin: 0;
+        line-height: 1.6;
+        color: #020202ff;
+        font-size: 1rem;
+    }
+
+    .text-section span.highlight {
+        background: #964F33;
+        color: #fff;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1100px){
+
+    /* container for main gallery */
+    .gallery-container {
+        display: flex;
+        flex-direction: row;
+        min-height: 750px;
+        width: 100%;
+        height: 100%;
+        background: #D3EAE4;
+
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Thumbnails */
+    .thumbnails {
+        width: 120px;
+        height: 100%;
+        max-height: 850px;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 0;
+    }
+}

@@ -1,0 +1,60 @@
+09/04/25
+
+Dutchman Wetlands Website Project
+
+PROJECT BILLING INFO:
+Billing for when working on active website development:
+ARWWS Dutchman I&M 2025: Task 1 Dutchman I&M
+
+Bill to Admin for any research, major bug fixing, training, etc. 
+Reach out to me (clara) if you are unsure where to bill to.
+
+Links to reqeusted site content:
+
+SITE TEXT / OUTLINE:
+https://pioneertechnicalservices.sharepoint.com/:w:/s/ARWWSBiodiversityTeam/Ecyd8zrVnZJEo4-k_tfeXHIBjVOmLy1GZg0_Dj6-h0fjSA?e=fbcKuk
+
+Photos:
+https://pioneertechnicalservices.sharepoint.com/:f:/s/ARWWSBiodiversityTeam/ElrZjqjsQAxBjiyVpuBwrEwBAU3vml9GFhP9TQwSuQQ_cQ?e=IJc1AO
+https://pioneertechnicalservices-my.sharepoint.com/:f:/g/personal/ksukut_pioneer-technical_com/EvBFNJKa65BBlnXBXBAFnpkBPOVJh-hC-X4Qhdp2ss1z6g?e=1ZKNwh
+
+Drone Footage:
+https://pioneertechnicalservices-my.sharepoint.com/:f:/g/personal/ksukut_pioneer-technical_com/EsvxSYB7Q_1EkbI4zY1HSJEBi566WmrV2j531rd27rSMMg?e=3xYaaN
+
+
+Email from PM requesting the project:
+"I think the goal would be for you to develop/structure the site according to the outline, and once we are comfortable with it we would then preview 
+it with ARCO (client) for their input. Once they are good with things, we would publish this, and create a QR code to put up at the kiosks 
+for people to scan get more information about the site, should they desire to."
+
+Thoughts:
+
+We need to make sure this website is both mobile-compatible and desktop-compatible because people will mostl likely be accessing it the most via a QR code while
+out on-site. 
+
+
+My inital vision for this is to have a gallery of photos at the top of the site for the user to view. There will be a main photo view, and smaller photo views
+in the "gallery". When the user clicks on a photo in the gallery, it will enlarge in the main photo view.
+
+We need to think about how best to incoorperate the drone footage (also best place to host it publically so we can call into the site), and where
+to strategically put photos throughout the site as well.
+
+We also need to develop a pertinant aesthetic / color scheme for the site UI. I'm thinking we keep things minimal, clean and with colors that envoke wetlands,
+restoration, outdoors.
+
+Color scheme thought (hex codes):
+
+#D3EAE4
+
+#CEC2B2
+
+#964F33
+
+#2F5848
+
+#020202ff
+
+Figma Design Sharelink
+I'm not sure how this works yet. But here's a share link from the Design I started. I think we'll be able to collaborate on it
+
+https://www.figma.com/design/8CT85VZ4DSc6VgK6y3HqJS/Dutchman?node-id=1-902&t=Dseg8IPpDo8yivEP-1

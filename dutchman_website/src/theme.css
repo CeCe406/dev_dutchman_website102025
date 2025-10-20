@@ -1,0 +1,18 @@
+:root {
+    --color-mint: #D3EAE4;
+    --color-beige: #CEC2B2;
+    --color-clay: #964F33;
+    --color-green: #2F5848;
+    --color-black: #020202ff;
+    --color-white: #FFFFFF;
+
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    background-color: var(--color-white);
+    color: var(--color-black);
+}

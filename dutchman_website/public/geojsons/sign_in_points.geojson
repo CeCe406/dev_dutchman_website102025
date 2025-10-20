@@ -1,0 +1,77 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 0,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.85801454086911,
+                    46.14708172201545
+                ]
+            },
+            "properties": {
+                "FID": 0,
+                "PopupInfo": "Block Managment Area Sign-In Location",
+                "Northing": 709892.60172899999,
+                "Easting": 1118028.7104199999,
+                "point_num": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.86541841223411,
+                    46.14624135022563
+                ]
+            },
+            "properties": {
+                "FID": 1,
+                "PopupInfo": "Block Managment Area Sign-In Location",
+                "Northing": 709667.05130499997,
+                "Easting": 1116141.54945,
+                "point_num": 2
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.807472371,
+                    46.1911007651
+                ]
+            },
+            "properties": {
+                "FID": 2,
+                "PopupInfo": "Block Managment Area Sign-In Location",
+                "Northing": 0,
+                "Easting": 0,
+                "point_num": 3
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.85953625965635,
+                    46.193814088257696
+                ]
+            },
+            "properties": {
+                "FID": 3,
+                "PopupInfo": "Block Managment Area Sign-In Location",
+                "Northing": 0,
+                "Easting": 0,
+                "point_num": 4
+            }
+        }
+    ]
+}

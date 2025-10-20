@@ -1,0 +1,53 @@
+.hunting-header{
+    width: 100%;
+    height: 164px;
+    flex-shrink: 0;
+    background: #2F5848;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    display: inline-flex;
+}
+
+.hunting-title{
+    color: #EFE;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 150%; /* 72px */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    justify-content: flex-start;
+    padding: 46px 197px 46px 80px;
+    margin: 0;
+}
+
+.hunting-nav{
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--Spacing-M, 48px);
+    padding: 50px 80px 40px 0px;
+    margin: 0;
+    width: 100%;
+}
+
+.hunting-nav-items{
+    color: #EFE;
+
+    /* Body text */
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+}

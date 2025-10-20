@@ -1,0 +1,177 @@
+.wildlife-main-container {
+    width: 100%;
+    height: 100%;
+}
+
+.wildlife-overview-title {
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.96px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    padding: 100px 0px 24px 80px;
+    margin: 0;
+}
+
+.wildlife-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 203px;
+}
+
+.wildlife-overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+
+    color: #828282;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 36px */
+    padding-left: 80px;
+    margin: 0;
+}
+
+.birds-title {
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.96px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    padding-left: 80px;
+    padding-top: 150px;
+    margin: 0;
+}
+
+.birds-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+
+    color: #828282;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 36px */
+    padding-left: 80px;
+    padding-top: 50px;
+}
+
+.wildlife-right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.mammals-container {
+    display: flex;
+    height: 395px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border-left: 7px solid #964F33;
+    margin-bottom: 200px;
+    padding-right: 250px;
+}
+
+.mammals-title {
+    display: flex;
+    height: 47px;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 680;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-color: #2F5848;
+    text-decoration-thickness: 20%;
+    /* 8px */
+    text-underline-offset: 25%;
+    /* 10px */
+    text-underline-position: from-font;
+
+    margin: 0;
+    padding-left: 20px;
+}
+
+.mammals-list {
+    color: rgba(0, 0, 0, 0.75);
+
+    /* Subheading */
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 36px */
+
+    margin: 0;
+    padding-left: 45px;
+}
+
+.wildlife-right-image {
+    height: 742px;
+    flex-shrink: 0;
+    aspect-ratio: 84/157;
+
+    border: 8px solid #964F33;
+    background: url("../../photos/Wildlife/AR_29 08.23.24.jpg") lightgray -163.922px 0px / 349.515% 105.455% no-repeat;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    margin-right: 100px;
+}
+
+.wildlife-sightings {
+    padding: 0;
+    margin: 0;
+}
+
+.wildlife-sightings-title {
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.96px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    padding-left: 80px;
+    padding-top: 150px;
+    margin: 0;
+}
