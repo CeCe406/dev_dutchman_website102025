@@ -1,0 +1,69 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 0,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.82458939668754,
+                    46.164112076409225
+                ]
+            },
+            "properties": {
+                "FID": 0,
+                "PopupInfo": "Access to the Dutchman Site and Warm Springs Creek from MT Highway 48",
+                "Northing": 0,
+                "Easting": 0,
+                "point_num": 1,
+                "photo": [
+                    "hw48_access.jpg"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.8074283621888,
+                    46.191046779802733
+                ]
+            },
+            "properties": {
+                "FID": 1,
+                "PopupInfo": "Access to the Dutchman Site from the Warm Springs WMA",
+                "Northing": 0,
+                "Easting": 0,
+                "point_num": 2,
+                "photo": [
+                    "wsp_access.jpg"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.85563297063642,
+                    46.182122922345222
+                ]
+            },
+            "properties": {
+                "FID": 2,
+                "PopupInfo": "Access to the Dutchman Pond from Galen Road",
+                "Northing": 0,
+                "Easting": 0,
+                "point_num": 3,
+                "photo": [
+                    "dutchman_pond_access1.jpg",
+                    "dutchman_pond_access2.jpg"
+                ]
+            }
+        }
+    ]
+}
