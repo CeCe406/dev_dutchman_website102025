@@ -1,8 +1,8 @@
 {
   "name": "dutchman_website",
-  "homepage": "https://CeCe406.github.io/dev_dutchman_website102025",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://CeCe406.github.io/dev_dutchman_website102025",
+  "private": false,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
