@@ -73,7 +73,7 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
       // --- Load streams layer ---
       const loadLayers = async () => {
         try {
-          const response = await fetch("geojsons/streams_in_dutchman.geojson");
+          const response = await fetch("${process.env.PUBLIC_URL}/dutchman_website/geojsons/streams_in_dutchman.geojson");
           const data = await response.json();
 
           const onEachFeature = (feature, layer) => {
