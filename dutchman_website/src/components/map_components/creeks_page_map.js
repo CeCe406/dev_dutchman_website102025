@@ -110,18 +110,10 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
               if (!popupEl) return;
 
               const imgs = popupEl.querySelectorAll("img[data-photo]");
-              imgs.forEach((img, idx) => {
-                const handler = () => {
-                  const slides = feature.properties.PHOTOS.map((file) => ({
-                    src: `${process.env.PUBLIC_URL}/creek_photos/${file}`,
-                  }));
-                  setLightboxSlides(slides);
-                  setLightboxOpen(true);
-                  setLightboxIndex(idx);
-                };
-                img.addEventListener("click", handler);
-                img.addEventListener("touchstart", handler);
-                img._handler = handler;
+              imgs.forEach((img) => {
+                img.addEventListener("click", () => {
+                  window.open(img.src, "_blank");
+                });
               });
             };
 
