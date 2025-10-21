@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dev_dutchman_website102025/static/css/main.24fa5713.css",
-    "main.js": "/dev_dutchman_website102025/static/js/main.09ea1326.js",
+    "main.js": "/dev_dutchman_website102025/static/js/main.0e570244.js",
     "static/js/511.ed8b93f9.chunk.js": "/dev_dutchman_website102025/static/js/511.ed8b93f9.chunk.js",
     "static/media/250630_233443_271.jpg": "/dev_dutchman_website102025/static/media/250630_233443_271.bc6afb173b3259fa6f03.jpg",
     "static/media/250630_233502_014.jpg": "/dev_dutchman_website102025/static/media/250630_233502_014.55e3267fa63ffd7fbef6.jpg",
@@ -41,11 +41,11 @@
     "static/media/AR_29 09.07.24.jpg": "/dev_dutchman_website102025/static/media/AR_29 09.07.24.969e26cf588154a38520.jpg",
     "index.html": "/dev_dutchman_website102025/index.html",
     "main.24fa5713.css.map": "/dev_dutchman_website102025/static/css/main.24fa5713.css.map",
-    "main.09ea1326.js.map": "/dev_dutchman_website102025/static/js/main.09ea1326.js.map",
+    "main.0e570244.js.map": "/dev_dutchman_website102025/static/js/main.0e570244.js.map",
     "511.ed8b93f9.chunk.js.map": "/dev_dutchman_website102025/static/js/511.ed8b93f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.24fa5713.css",
-    "static/js/main.09ea1326.js"
+    "static/js/main.0e570244.js"
   ]
 }
