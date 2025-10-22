@@ -33,7 +33,7 @@ export default function Main() {
                                         {selectedCreekInfo.photos.map((photo, i) => (
                                             <img
                                                 key={i}
-                                                src={`/creek_photos/${photo}`}
+                                                src={`${process.env.PUBLIC_URL}/creek_photos/${photo}`}
                                                 alt={`Creek ${i + 1}`}
                                                 onClick={() => setLightboxOpen(true)}
                                             />
