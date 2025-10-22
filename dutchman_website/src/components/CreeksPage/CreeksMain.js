@@ -44,7 +44,7 @@ export default function Main() {
                                     open={lightboxOpen}
                                     close={() => setLightboxOpen(false)}
                                     slides={
-                                        selectedCreekInfo.photos?.map((p) => ({ src: `/creek_photos/${p}` })) || []
+                                        selectedCreekInfo.photos?.map((p) => ({ src: `${process.env.PUBLIC_URL}/creek_photos/${p}` })) || []
                                     }
                                 />
                             </div>
