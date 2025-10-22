@@ -82,25 +82,28 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
                 const info = feature.properties?.Info || "No info available.";
                 const photos = feature.properties?.PHOTOS || [];
 
-                // Build popup HTML
-                let popupContent = `<div>${info}</div>`;
 
-                if (photos.length > 0) {
-                  popupContent += `<div style="margin-top: 8px;">`;
-                  photos.forEach((file) => {
-                    popupContent += `
-                <img 
-                  src="${process.env.PUBLIC_URL}/creek_photos/${file}"
-                  alt="popup photo" 
-                  data-photo="${file}" 
-                  style="width: 60px; height: auto; margin: 5px; cursor: pointer; border-radius: 4px;" 
-                />`;
-                  });
-                  popupContent += `</div>`;
-                }
-
-                layer.bindPopup(popupContent).openPopup();
+                onCreekClick({ info, photos });
               },
+
+              // Build the same photo section HTML, but don't attach it to a popup
+              // let photoHTML = "";
+              // if (photos.length > 0) {
+              //   photoHTML += `<div style="margin-top: 8px;">`;
+              //   photos.forEach((file) => {
+              //     photoHTML += `
+              // <img 
+              //   src="${process.env.PUBLIC_URL}/creek_photos/${file}"
+              //   alt="popup photo" 
+              //   data-photo="${file}" 
+              //   style="width: 60px; height: auto; margin: 5px; cursor: pointer; border-radius: 4px;" 
+              // />`;
+              //   });
+              //   photoHTML += `</div>`;
+              //   // }
+
+              //   onCreekClick({ info, photos });
+              // },
 
               mouseover: () => {
                 layer.setStyle({ color: "#0400ffff", weight: 6 });
