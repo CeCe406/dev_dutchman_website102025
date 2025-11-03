@@ -2,6 +2,8 @@
 /* Mobile CSS */
 .footer-container{
     padding: 50px 0px 0px 0px;
+    margin: 0;
+    align-items: center;
 }
 
 .container{
@@ -9,6 +11,7 @@
     height: 164px;
     flex-shrink: 0;
     background: white;
+    padding: 0;
     margin: 0;
     align-items: center;
     display: flex;
@@ -48,11 +51,13 @@
 
     /* Body text */
     font-family: Inter;
-    font-size: 14px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 30px */
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .divider{
