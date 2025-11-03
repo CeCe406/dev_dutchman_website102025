@@ -1,11 +1,11 @@
-
+/* Mobile CSS */
 .gallery-page {
     display: flex;
     width: 70%;
     height: 100%;
     flex-direction: column;
     align-items: center;
-    padding-left: 40px;
+    padding-top: 25px;
     margin: 0;
     background: #FFFFFF;
 }
@@ -13,8 +13,8 @@
 /* container for main gallery */
 .gallery-container {
     display: flex;
-    flex-direction: row;
-    min-height: 575px;
+    flex-direction: column;
+    min-height: 200px;
     width: 100%;
     height: 100%;
     background: white;
@@ -72,21 +72,21 @@
 /* Thumbnails */
 
 .thumbnails {
-    width: 15%;
-    height: 100%;
-    max-height: 500px;
+    width: 100%;
+    height: 20%;
+    max-width: 350px;
     display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
     margin: 0;
     padding-left: 0;
     background: white;
 }
 
 .thumbnail {
-    width: 120px;
-    height: 120px;
+    width: 50px;
+    height: 50px;
     border-radius: 8px;
     object-fit: cover;
     cursor: pointer;
@@ -111,14 +111,15 @@
 .gallery-wrapper {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
     padding: 0px;
     margin:0;
 }
 
 .gallery-intro{
-    width: 30%;
+    /* width: 100%; */
     text-align: left;
     color: #828282;
     font-family: Inter;
@@ -128,4 +129,138 @@
     line-height: 150%; /* 36px */
     padding: 30px 40px 0px 40px;
     margin:0;
+}
+/* -------------------------------------------------------------- */
+/* Main CSS */
+@media (min-width:500px){
+    .gallery-page {
+        display: flex;
+        width: 70%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 40px;
+        margin: 0;
+        background: #FFFFFF;
+    }
+
+    /* container for main gallery */
+    .gallery-container {
+        display: flex;
+        flex-direction: row;
+        min-height: 575px;
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-radius: 12px;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    /* main image container */
+    .main-image-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF;
+        position: relative;
+        padding: 0;
+        margin:0;
+    }
+
+    .main-image {
+        max-width: 90%;
+        /* max-height: 85vh; */
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+        border: 3px solid var(--color-clay);
+    }
+
+    /* buttons to move between images */
+    .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+    }
+
+    .nav-button:hover {
+        background: rgba(2, 2, 2, 0.8);
+    }
+
+    .nav-button.left {
+        left: 16px;
+    }
+
+    .nav-button.right {
+        right: 16px;
+    }
+
+    /* Thumbnails */
+
+    .thumbnails {
+        width: 15%;
+        height: 100%;
+        max-height: 500px;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 0;
+        padding-left: 0;
+        background: white;
+    }
+
+    .thumbnail {
+        width: 120px;
+        height: 120px;
+        border-radius: 8px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 3px solid transparent;
+        transition: border 0.25s ease, transform 0.2s ease;
+        background: var(--color-beige);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        padding:0;
+        margin:0;
+    }
+
+    .thumbnail:hover {
+        border: 3px solid var(--color-clay);
+        transform: scale(1.05);
+    }
+
+    .thumbnail.active {
+        border: 3px solid var(--color-mint);
+        box-shadow: 0 0 6px var(--color-mint);
+    }
+
+    .gallery-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        padding: 0px;
+        margin:0;
+    }
+
+    .gallery-intro{
+        width: 30%;
+        text-align: left;
+        color: #828282;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 36px */
+        padding: 30px 40px 0px 40px;
+        margin:0;
+    }
 }
