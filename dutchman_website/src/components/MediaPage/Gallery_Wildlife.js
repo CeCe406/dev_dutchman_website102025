@@ -53,7 +53,7 @@ export default function Gallery() {
                                 setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
                             }
                         >
-                            ⬅
+                            &#11013;
                         </button>
 
                         <img src={images[selectedIndex]} alt="Selected" className="media-main-image" />
@@ -62,7 +62,7 @@ export default function Gallery() {
                             className="media-nav-button right"
                             onClick={() => setSelectedIndex((selectedIndex + 1) % images.length)}
                         >
-                            ➡
+                            &#11157;
                         </button>
                     </div>
                 </div>
