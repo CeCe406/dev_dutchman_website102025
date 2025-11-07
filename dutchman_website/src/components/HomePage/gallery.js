@@ -61,24 +61,30 @@ export default function Gallery() {
                 <div className="gallery-container">
                     {/* Main image + nav */}
                     <div className="main-image-container">
-                        <button
-                            className="nav-button left"
-                            onClick={() =>
-                                setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
-                            }
-                        >
-                            &#11013;
-                        </button>
-
                         <img src={images[selectedIndex]} alt="Selected" className="main-image" />
 
-                        <button
-                            className="nav-button right"
-                            onClick={() => setSelectedIndex((selectedIndex + 1) % images.length)}
-                        >
-                            &#11157;
-                        </button>
+                        {/* Mobile arrow container */}
+                        <div className="arrow-controls">
+                            <button
+                                className="nav-button left"
+                                onClick={() =>
+                                    setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
+                                }
+                            >
+                                &#8592;
+                            </button>
+
+                            <button
+                                className="nav-button right"
+                                onClick={() =>
+                                    setSelectedIndex((selectedIndex + 1) % images.length)
+                                }
+                            >
+                                &#8594;
+                            </button>
+                        </div>
                     </div>
+
 
                     {/* Thumbnails */}
                     <div className="thumbnails">
@@ -95,13 +101,13 @@ export default function Gallery() {
                 </div>
             </div>
             <div className='gallery-intro'>
-                The Dutchman is the largest remaining contiguous wetlands site within the Upper Clark Fork River Basin. 
+                The Dutchman is the largest remaining contiguous wetlands site within the Upper Clark Fork River Basin.
                 <br></br><br></br>
-                Several retention dams located across the site also create ponds for wildlife habitat and contribute to the wetland habitat. Wetlands provide many benefits for soil, plants, animals, and vegetation and foster biodiversity. 
+                Several retention dams located across the site also create ponds for wildlife habitat and contribute to the wetland habitat. Wetlands provide many benefits for soil, plants, animals, and vegetation and foster biodiversity.
                 <br></br><br></br>
-                Every year the United States loses about 60,000 acres of wetlands due to land development, non-native/invasive species, and industrial/agriculture runoff, and therefore the Dutchman Wetlands site includes property covenants to restrict future development and manage site use to preserve sensitive wetland habitat on the site. 
+                Every year the United States loses about 60,000 acres of wetlands due to land development, non-native/invasive species, and industrial/agriculture runoff, and therefore the Dutchman Wetlands site includes property covenants to restrict future development and manage site use to preserve sensitive wetland habitat on the site.
                 <br></br><br></br>
-                Plants that can be observed within these wetlands areas include various species of rushes, sedges, cattails, willows, aspen, and other wetland-type plant species. Drier areas of the site include upland grasses, wildflowers and shrubbery. 
+                Plants that can be observed within these wetlands areas include various species of rushes, sedges, cattails, willows, aspen, and other wetland-type plant species. Drier areas of the site include upland grasses, wildflowers and shrubbery.
             </div>
         </div>
     );
