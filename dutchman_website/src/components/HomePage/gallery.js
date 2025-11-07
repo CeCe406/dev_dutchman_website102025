@@ -54,32 +54,61 @@ export default function Gallery() {
     }, [images.length]);
 
     return (
-
         <div className="gallery-wrapper">
             <div className="gallery-page">
-                {/* Gallery */}
                 <div className="gallery-container">
-                    {/* Main image + nav */}
                     <div className="main-image-container">
-                        <img src={images[selectedIndex]} alt="Selected" className="main-image" />
+                        <img
+                            src={images[selectedIndex]}
+                            alt="Selected"
+                            className="main-image"
+                        />
 
                         <div className="arrow-controls">
+                            {/* Left Arrow */}
                             <button
                                 className="nav-button left"
                                 onClick={() =>
                                     setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
                                 }
+                                aria-label="Previous image"
                             >
-                                &#11013;
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <polyline points="15 18 9 12 15 6" />
+                                </svg>
                             </button>
 
+                            {/* Right Arrow */}
                             <button
                                 className="nav-button right"
                                 onClick={() =>
                                     setSelectedIndex((selectedIndex + 1) % images.length)
                                 }
+                                aria-label="Next image"
                             >
-                                &#11157;
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <polyline points="9 18 15 12 9 6" />
+                                </svg>
                             </button>
                         </div>
                     </div>
