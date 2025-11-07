@@ -63,7 +63,6 @@ export default function Gallery() {
                     <div className="main-image-container">
                         <img src={images[selectedIndex]} alt="Selected" className="main-image" />
 
-                        {/* Mobile arrow container */}
                         <div className="arrow-controls">
                             <button
                                 className="nav-button left"
@@ -71,7 +70,7 @@ export default function Gallery() {
                                     setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
                                 }
                             >
-                                &#8592;
+                                &#11013;
                             </button>
 
                             <button
@@ -80,7 +79,7 @@ export default function Gallery() {
                                     setSelectedIndex((selectedIndex + 1) % images.length)
                                 }
                             >
-                                &#8594;
+                                &#11157;
                             </button>
                         </div>
                     </div>
