@@ -71,39 +71,6 @@
     }
 }
 
-/* main image container */
-/* .main-image-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #FFFFFF;
-    position: relative;
-    padding: 0;
-    margin:0;
-} */
-
-/* .main-image {
-    max-width: 90%;
-    border-radius: 12px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
-    border: 3px solid var(--color-clay);
-} */
-
-/* buttons to move between images */
-/* .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-family: Inter;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-} */
 
 .nav-button {
     background: transparent;
@@ -118,9 +85,7 @@
     justify-content: center;
 }
 
-/* .nav-button:hover {
-    background: rgba(2, 2, 2, 0.8);
-} */
+
 
 .nav-button:hover {
     color: var(--color-mint);
