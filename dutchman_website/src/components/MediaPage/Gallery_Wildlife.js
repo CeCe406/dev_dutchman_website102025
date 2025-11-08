@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import "./MediaGallery.css";
+import GalleryBase from "./Gallery_Base";
 
 import img1 from "../../photos/Wildlife/AR_29 08.23.24.jpg";
 import img2 from "../../photos/Wildlife/AR_29 08.24.24.jpg";
