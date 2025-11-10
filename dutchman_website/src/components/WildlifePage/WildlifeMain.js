@@ -9,19 +9,19 @@ export default function Main() {
             <div className='wildlife-content'>
                 <div className='wildlife-left-column'>
                     <p className='wildlife-overview'>
-                        In 2015, Atlantic Richfield began completing annual wildlife and avian monitoring surveys for the Dutchman Wetlands to take inventory of wildlife that are actively utilizing the site.
+                        Wildlife and avian monitoring surveys for the Dutchman Wetlands began in 2015 and continue on an annual basis. These surveys are conducted to inventory wildlife that are actively utilizing the site.
                         <br></br><br></br>
-                        The goal of wildlife data collection is to add to annual datasets for mammal species and their subsequent habitat that will continue to be used for tracking populations, identifying migratory corridors, and informing future management decisions for the Dutchman.
+                        Data collected from these monitoring events is added to annual datasets for species diversity tracking and habitat monitoring. Data is also used for tracking populations, identifying migratory corridors, and informing future management decisions for the Dutchman.
                         <br></br><br></br>
-                        Game cameras have also be deployed for monitoring purposes and may be encountered at the site.
+                        Game cameras have also been deployed for monitoring purposes and may be encountered at the site.
                     </p>
                     <h1 className='birds-title'>
                         Birds
                     </h1>
                     <p className='birds-content'>
-                        Atlantic Richfield conducts annual, migratory bird surveys each spring at various locations through the Dutchman Wetlands. A total of 160 out of the 433 known bird species in Montana have been observed at the Dutchman Wetlands.
+                        Migratory bird surveys are conducted each spring at various locations throughout the Dutchman Wetlands. A total of 160 of the 433 known bird species in Montana have been observed at the Dutchman Wetlands.
                         <br></br><br></br>
-                        Many of these species also breed on-site, including numerous songbirds, waterfowl, and shorebird species. Rare species have also been observed, such as long and short-eared owls, sandhill cranes, and sora. Informational kiosks are present at the Dutchman Pond and Highway 48 access points include a bird-species checklist that is available at the kiosks to recreational users.
+                        Many of these species also breed on-site, including songbirds, waterfowl, and shorebirds. Rare species have also been observed, such as long and short-eared owls, sandhill cranes, and sora. Informational kiosks located at the Dutchman Pond and Highway 48 access points include a bird-species checklist which is available to recreational users.
                         <br></br><br></br>
                         Target areas for bird watching onsite would include the Dutchman Pond, Warm Springs Creek, and any of the wetland/shrubland areas.
                     </p>

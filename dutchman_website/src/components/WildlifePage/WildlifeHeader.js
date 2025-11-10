@@ -33,7 +33,7 @@ export default function Header() {
                         Wildlife of the Wetlands
                     </h1>
                     <p className='wildlife-subtitle'>
-                        The Dutchman wetlands are home to a variety of wildlife including moose, deer, coyote, and several different bird species.
+                        The Dutchman Wetlands are home to a variety of wildlife including moose, deer, coyote, and numerous bird species.
                     </p>
                 </div>
             </div>
