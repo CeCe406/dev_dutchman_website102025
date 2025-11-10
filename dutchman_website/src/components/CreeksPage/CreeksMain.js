@@ -5,6 +5,8 @@ import Map from "../map_components/creeks_page_map"
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+
 export default function Main() {
     const [selectedCreekInfo, setSelectedCreekInfo] = useState(null);
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -15,18 +17,10 @@ export default function Main() {
 
     // keep scroll position when user closes lighboxes of creek photos
     useEffect(() => {
-        if (lightboxOpen) {
-            const scrollY = window.scrollY;
-            document.body.style.position = "fixed";
-            document.body.style.top = `-${scrollY}px`;
-            document.body.style.width = "100%";
-        } else {
-            const y = Math.abs(parseInt(document.body.style.top || "0"));
-            document.body.style.position = "";
-            document.body.style.top = "";
-            document.body.style.width = "";
-            window.scrollTo(0, y);
-        }
+        const target = document.querySelector(".yet-another-react-lightbox");
+        if (lightboxOpen && target) disableBodyScroll(target);
+        else enableBodyScroll(target);
+        return () => enableBodyScroll(target);
     }, [lightboxOpen]);
 
     return (
