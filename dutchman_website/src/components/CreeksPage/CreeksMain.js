@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./CreeksMain.css";
 import Map from "../map_components/creeks_page_map"
 
@@ -12,6 +12,22 @@ export default function Main() {
     const handleCreekClick = ({ info, photos }) => {
         setSelectedCreekInfo({ info, photos });
     };
+
+    // keep scroll position when user closes lighboxes of creek photos
+    useEffect(() => {
+        if (lightboxOpen) {
+            const scrollY = window.scrollY;
+            document.body.style.position = "fixed";
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = "100%";
+        } else {
+            const y = Math.abs(parseInt(document.body.style.top || "0"));
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.width = "";
+            window.scrollTo(0, y);
+        }
+    }, [lightboxOpen]);
 
     return (
         <div className='creeks-main-container'>
