@@ -17,9 +17,9 @@ export default function Main() {
                 <div className='hunting-image-3'></div>
             </div>
             <div className='hunting-body'>
-                The Dutchman Wetlands is part of Montana Fish, Wildlife & Parks (Montana FWP) Block Management Access Program.
+                The Dutchman Wetlands is part of Montana Fish, Wildlife & Parks (FWP) Block Management Access Program.
                 <br></br><br></br>
-                Therefore, hunters can enjoy both archery and rifle hunting within the Dutchman Wetlands. Big game species observed onsite include Elk, Mule Deer, Whitetail Deer, and Moose. Additionally, waterfowl and upland game bird can be pursued, with the majority of migratory waterfowl species utilizing ponds and streams in and around the area. Upland game bird opportunities are limited, but ring-necked pheasant and Hungarian partridge have sporadically been observed at the site.
+                Hunters can enjoy both archery and rifle hunting within the Dutchman. Big game species observed at the site include Elk, Mule Deer, Whitetail Deer, and Moose. Additionally, waterfowl and upland game bird can be pursued, with the majority of migratory waterfowl species utilizing ponds and streams in and around the area. Upland game bird opportunities are limited, but ring-necked pheasant and Hungarian partridge have sporadically been observed at the site.
                 <br></br><br></br>
                 Please visit the Montana FWP’s website for additional information regarding season dates, closures, and general regulations regarding hunting information. Links to important information on Montana FWP’s hunting page is provided here:
                 <br></br>
