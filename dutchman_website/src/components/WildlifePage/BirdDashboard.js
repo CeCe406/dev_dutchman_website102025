@@ -133,35 +133,32 @@ const BirdDashboard = () => {
                             ))}
                         </select>
                     </div>
-                    <ResponsiveContainer width="100%" height={400}>
-                        <BarChart
-                            data={Object.entries(
-                                birds
-                                    .filter((b) => b[selectedYear])
-                                    .reduce((acc, bird) => {
-                                        acc[bird.Family] = (acc[bird.Family] || 0) + 1;
-                                        return acc;
-                                    }, {})
-                            ).map(([family, count]) => ({ family, count }))}
-                            margin={{ top: 20, right: 20, bottom: 50, left: 20 }}
-                        >
-                            <XAxis
-                                dataKey="family"
-                                angle={-25}
-                                textAnchor="end"
-                                interval={0}
-                                fontSize={12}
-                            />
-                            <YAxis />
-                            <Tooltip />
-                            <Bar dataKey="count">
-                                {familyData.map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                                ))}
-                            </Bar>
 
-                        </BarChart>
-                    </ResponsiveContainer>
+                    <div className="bird-family-chart-inner"
+                        style={{ minWidth: `${familyData.length * 80}px` }}>
+                        {/* 80px per bar; adjusts dynamically based on number of families */}
+                        <ResponsiveContainer width="100%" height={400}>
+                            <BarChart
+                                data={familyData}
+                                margin={{ top: 20, right: 20, bottom: 50, left: 20 }}
+                            >
+                                <XAxis
+                                    dataKey="family"
+                                    angle={-25}
+                                    textAnchor="end"
+                                    interval={0}
+                                    fontSize={12}
+                                />
+                                <YAxis />
+                                <Tooltip />
+                                <Bar dataKey="count">
+                                    {familyData.map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                    ))}
+                                </Bar>
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </div>
                 </div>
             )}
         </div>
