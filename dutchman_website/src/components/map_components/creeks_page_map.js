@@ -29,13 +29,9 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
       ).addTo(mapRef.current);
 
       const imageryLayer = L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}",
+        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
         {
-          attribution:
-            '© Stadia Maps | © OSM',
-          ext: "jpg",
-          bounds: projectBounds,
-          noWrap: true
+          attribution: 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, USDA FSA, USGS, AeroGRID, IGN, and the GIS User Community'
         }
       ).addTo(mapRef.current);
 
