@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./CreeksMain.css";
 import Map from "../map_components/creeks_page_map"
 
@@ -10,6 +10,7 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 export default function Main() {
     const [selectedCreekInfo, setSelectedCreekInfo] = useState(null);
     const [lightboxOpen, setLightboxOpen] = useState(false);
+    const lightboxRef = useRef(null);
 
     const handleCreekClick = ({ info, photos }) => {
         setSelectedCreekInfo({ info, photos });
@@ -17,10 +18,15 @@ export default function Main() {
 
     // keep scroll position when user closes lighboxes of creek photos
     useEffect(() => {
-        const target = document.querySelector(".yet-another-react-lightbox");
-        if (lightboxOpen && target) disableBodyScroll(target);
-        else enableBodyScroll(target);
-        return () => enableBodyScroll(target);
+        const target = lightboxRef.current;
+        if (lightboxOpen && target) {
+            disableBodyScroll(target);
+        } else if (target) {
+            enableBodyScroll(target);
+        }
+        return () => {
+            if (target) enableBodyScroll(target);
+        };
     }, [lightboxOpen]);
 
     return (
@@ -50,7 +56,9 @@ export default function Main() {
                                         ))}
                                     </div>
                                 )}
+
                                 <Lightbox
+                                    ref={lightboxRef}
                                     open={lightboxOpen}
                                     close={() => setLightboxOpen(false)}
                                     slides={
