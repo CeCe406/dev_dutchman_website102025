@@ -20,6 +20,10 @@
     /* prevent overly wide popups on mobile */
 }
 
+.leaflet-popup-pane {
+    z-index: 9999;
+}
+
 /* Popup tip styling */
 .leaflet-popup-tip {
     background-color: #D3EAE4;
@@ -141,7 +145,7 @@
 
 /* -------------------------------------------------------------- */
 /* Main CSS */
-@media (min-width:500px){
+@media (min-width:500px) {
     .child-map-container {
         width: 90%;
         height: 100%;
