@@ -23,42 +23,73 @@
     align-items: center;
 }
 
-/* main image container */
-.main-image-container {
-    flex: 1;
+/* mobile test update */
+@media (max-width: 499px) {
+    .main-image-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-image {
+        width: 90%;
+        height: auto;
+        max-width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+        border: 3px solid var(--color-clay);
+        object-fit: contain;
+    }
+
+    /* Position arrows BELOW image */
+    .arrow-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 12px;
+    }
+
+    .nav-button {
+        background: transparent;
+        border: none;
+        color: var(--color-clay);
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.25rem 0.5rem;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-button:hover {
+        color: var(--color-mint);
+        transform: scale(1.1);
+    }
+}
+
+
+.nav-button {
+    background: transparent;
+    border: none;
+    color: var(--color-clay);
+    font-size: 2.2rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
-    position: relative;
-    padding: 0;
-    margin:0;
 }
 
-.main-image {
-    max-width: 90%;
-    /* max-height: 85vh; */
-    border-radius: 12px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
-    border: 3px solid var(--color-clay);
-}
 
-/* buttons to move between images */
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-}
 
 .nav-button:hover {
-    background: rgba(2, 2, 2, 0.8);
+    color: var(--color-mint);
+    transform: scale(1.1);
 }
 
 .nav-button.left {
@@ -94,8 +125,8 @@
     transition: border 0.25s ease, transform 0.2s ease;
     background: var(--color-beige);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 .thumbnail:hover {
@@ -115,10 +146,10 @@
     text-align: center;
     align-items: center;
     padding: 0px;
-    margin:0;
+    margin: 0;
 }
 
-.gallery-intro{
+.gallery-intro {
     /* width: 100%; */
     text-align: left;
     color: #828282;
@@ -126,13 +157,15 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 36px */
+    line-height: 150%;
+    /* 36px */
     padding: 30px 40px 0px 40px;
-    margin:0;
+    margin: 0;
 }
+
 /* -------------------------------------------------------------- */
 /* Main CSS */
-@media (min-width:500px){
+@media (min-width:500px) {
     .gallery-page {
         display: flex;
         width: 70%;
@@ -166,7 +199,7 @@
         background: #FFFFFF;
         position: relative;
         padding: 0;
-        margin:0;
+        margin: 0;
     }
 
     .main-image {
@@ -185,6 +218,7 @@
         background: rgba(0, 0, 0, 0.5);
         border: none;
         color: white;
+        font-family: Inter;
         font-size: 2rem;
         cursor: pointer;
         padding: 0.5rem 1rem;
@@ -228,8 +262,8 @@
         transition: border 0.25s ease, transform 0.2s ease;
         background: var(--color-beige);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
     }
 
     .thumbnail:hover {
@@ -248,10 +282,10 @@
         flex-direction: row;
         text-align: center;
         padding: 0px;
-        margin:0;
+        margin: 0;
     }
 
-    .gallery-intro{
+    .gallery-intro {
         width: 30%;
         text-align: left;
         color: #828282;
@@ -259,8 +293,9 @@
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
-        line-height: 150%; /* 36px */
+        line-height: 150%;
+        /* 36px */
         padding: 30px 40px 0px 40px;
-        margin:0;
+        margin: 0;
     }
 }

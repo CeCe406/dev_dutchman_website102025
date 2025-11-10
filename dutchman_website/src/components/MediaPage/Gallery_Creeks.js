@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import "./MediaGallery.css";
+import GalleryBase from "./Gallery_Base";
 
 import img6 from "../../photos/951DE5F0-69BC-4B81-8AF5-668B6A986574.JPG";
 import img7 from "../../photos/20201020_114546.jpg";
@@ -39,60 +38,5 @@ export default function Gallery() {
         img21,
         img22
     ];
-
-    const [selectedIndex, setSelectedIndex] = useState(0);
-
-    // Keyboard navigation
-    useEffect(() => {
-        const handleKeyDown = (e) => {
-            if (e.key === "ArrowRight") {
-                setSelectedIndex((prev) => (prev + 1) % images.length);
-            } else if (e.key === "ArrowLeft") {
-                setSelectedIndex((prev) => (prev - 1 + images.length) % images.length);
-            }
-        };
-        window.addEventListener("keydown", handleKeyDown);
-        return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [images.length]);
-
-    // Auto-advance
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setSelectedIndex((prev) => (prev + 1) % images.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, [images.length]);
-
-    return (
-
-        <div className="media-gallery-wrapper">
-            <div className="media-gallery-page">
-                {/* Gallery */}
-                <div className="media-gallery-container">
-                    {/* Main image + nav */}
-                    <div className="media-main-image-container">
-                        <button
-                            className="media-nav-button left"
-                            onClick={() =>
-                                setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
-                            }
-                        >
-                            ⬅
-                        </button>
-
-                        <img src={images[selectedIndex]} alt="Selected" className="media-main-image" />
-
-                        <button
-                            className="media-nav-button right"
-                            onClick={() => setSelectedIndex((selectedIndex + 1) % images.length)}
-                        >
-                            ➡
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    );
+    return <GalleryBase images={images} />;
 }
