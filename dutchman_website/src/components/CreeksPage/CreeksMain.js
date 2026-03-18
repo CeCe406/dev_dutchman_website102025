@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./CreeksMain.css";
 import Map from "../map_components/creeks_page_map"
 
@@ -12,22 +12,6 @@ export default function Main() {
     const handleCreekClick = ({ info, photos }) => {
         setSelectedCreekInfo({ info, photos });
     };
-
-    // keep scroll position when user closes lighboxes of creek photos
-    useEffect(() => {
-        if (lightboxOpen) {
-            const scrollY = window.scrollY;
-            document.body.style.position = "fixed";
-            document.body.style.top = `-${scrollY}px`;
-            document.body.style.width = "100%";
-        } else {
-            const y = Math.abs(parseInt(document.body.style.top || "0"));
-            document.body.style.position = "";
-            document.body.style.top = "";
-            document.body.style.width = "";
-            window.scrollTo(0, y);
-        }
-    }, [lightboxOpen]);
 
     return (
         <div className='creeks-main-container'>
@@ -49,7 +33,7 @@ export default function Main() {
                                         {selectedCreekInfo.photos.map((photo, i) => (
                                             <img
                                                 key={i}
-                                                src={`${process.env.PUBLIC_URL}/creek_photos/${photo}`}
+                                                src={`/creek_photos/${photo}`}
                                                 alt={`Creek ${i + 1}`}
                                                 onClick={() => setLightboxOpen(true)}
                                             />
@@ -60,7 +44,7 @@ export default function Main() {
                                     open={lightboxOpen}
                                     close={() => setLightboxOpen(false)}
                                     slides={
-                                        selectedCreekInfo.photos?.map((p) => ({ src: `${process.env.PUBLIC_URL}/creek_photos/${p}` })) || []
+                                        selectedCreekInfo.photos?.map((p) => ({ src: `/creek_photos/${p}` })) || []
                                     }
                                 />
                             </div>

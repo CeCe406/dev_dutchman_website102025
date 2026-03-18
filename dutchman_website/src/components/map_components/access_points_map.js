@@ -11,7 +11,7 @@ import 'yet-another-react-lightbox/styles.css';
 
 // custom access point icon
 var accessIcon = L.icon({
-  iconUrl: `${process.env.PUBLIC_URL}/access_point_photos/access_icon.png`,
+  iconUrl: "/access_point_photos/access_icon.png",
   iconSize: [36, 36],
   iconAnchor: [18, 18],
   popupAnchor: [-3, -18]
@@ -19,7 +19,7 @@ var accessIcon = L.icon({
 
 //custom block managment point icon
 var blockIcon = L.icon({
-  iconUrl: `${process.env.PUBLIC_URL}/access_point_photos/block_icon.png`,
+  iconUrl: "/access_point_photos/block_icon.png",
   iconSize: [24, 24],
   iconAnchor: [12, 12],
   popupAnchor: [-3, -12]
@@ -52,21 +52,14 @@ const LeafletComponent = () => {
         { attribution: "© OpenStreetMap contributors" }
       ).addTo(mapRef.current);
 
-      // const imageryLayer = L.tileLayer(
-      //   "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}",
-      //   {
-      //     attribution:
-      //       '© Stadia Maps | © OSM',
-      //     ext: "jpg",
-      //     bounds: projectBounds,
-      //     noWrap: true
-      //   }
-      // ).addTo(mapRef.current);
-
       const imageryLayer = L.tileLayer(
-        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}",
         {
-          attribution: 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, USDA FSA, USGS, AeroGRID, IGN, and the GIS User Community'
+          attribution:
+            '© Stadia Maps | © OSM',
+          ext: "jpg",
+          bounds: projectBounds,
+          noWrap: true
         }
       ).addTo(mapRef.current);
 
@@ -79,7 +72,7 @@ const LeafletComponent = () => {
     }
 
     // Add user location button for location capabilities
-    const locateButton = L.control({ position: "topleft" })
+    const locateButton = L.control({ postion: "topleft" })
 
     locateButton.onAdd = function (map) {
       const div = L.DomUtil.create("div", "leaflet-bar leaflet-control");
@@ -122,12 +115,12 @@ const LeafletComponent = () => {
         popupContent += `<div style="margin-top: 8px;">`;
         feature.properties.photo.forEach((file) => {
           popupContent += `
-      <img 
-        src="${process.env.PUBLIC_URL}/access_point_photos/${file}"
-        alt="popup photo" 
-        data-photo="${file}" 
-        style="width: 60px; height: auto; margin: 5px; cursor: pointer; border-radius: 4px;" 
-      />`;
+            <img 
+              src="/access_point_photos/${file}" 
+              alt="popup photo" 
+              data-photo="${file}" 
+              style="width: 60px; height: auto; margin: 5px; cursor: pointer; border-radius: 4px;" 
+            />`;
         });
         popupContent += `</div>`;
       }
@@ -143,7 +136,7 @@ const LeafletComponent = () => {
         imgs.forEach((img, idx) => {
           const handler = () => {
             const slides = feature.properties.photo.map((file) => ({
-              src: `${process.env.PUBLIC_URL}/access_point_photos/${file}`,
+              src: `/access_point_photos/${file}`,
             }));
             setLightboxSlides(slides);
             setLightboxOpen(true);
@@ -177,11 +170,11 @@ const LeafletComponent = () => {
     const loadLayers = async () => {
       try {
         const [wetlandRes, boundaryRes, linesRes, pointsRes, accessRes] = await Promise.all([
-          fetch(`${process.env.PUBLIC_URL}/geojsons/Wetland_Boundaries.geojson`),
-          fetch(`${process.env.PUBLIC_URL}/geojsons/Dutchman_Boundary.geojson`),
-          fetch(`${process.env.PUBLIC_URL}/geojsons/access_roads.geojson`),
-          fetch(`${process.env.PUBLIC_URL}/geojsons/sign_in_points.geojson`),
-          fetch(`${process.env.PUBLIC_URL}/geojsons/access_points.geojson`),
+          fetch("/geojsons/Wetland_Boundaries.geojson"),
+          fetch("/geojsons/Dutchman_Boundary.geojson"),
+          fetch("/geojsons/access_roads.geojson"),
+          fetch("/geojsons/sign_in_points.geojson"),
+          fetch("/geojsons/access_points.geojson"),
         ]);
 
         const [wetlandData, boundaryData, linesData, pointsData, accessData] = await Promise.all([
@@ -192,7 +185,7 @@ const LeafletComponent = () => {
           accessRes.json(),
         ]);
         // create and addd legend to map
-        const legend = L.control({ position: "bottomright" });
+        const legend = L.control({ postion: "bottomright" });
 
         legend.onAdd = function (map) {
           const div = L.DomUtil.create("div", "info legend");
@@ -203,8 +196,8 @@ const LeafletComponent = () => {
               <div><span style="background:#6df7f0ff; border:3px solid#003561ff;"></span> Wetland Boundary</div>
               <div><span style=" border:3px solid #64e77a;"></span> Dutchman Property Boundary</div>
               <div><span style="background:#ffe8b7; border:1px solid #000;"></span> Access Roads</div>
-              <div><img src="` + process.env.PUBLIC_URL + `/access_point_photos/access_icon.png" style="width:18px;height:18px;vertical-align:middle;margin-right:4px;"> Access Points</div>
-              <div><img src="` + process.env.PUBLIC_URL + `/access_point_photos/block_icon.png" style="width:14px;height:14px;vertical-align:middle;margin-right:6px;"> Sign-In Points</div>
+              <div><img src="/access_point_photos/access_icon.png" style="width:18px;height:18px;vertical-align:middle;margin-right:4px;"> Access Points</div>
+              <div><img src="/access_point_photos/block_icon.png" style="width:14px;height:14px;vertical-align:middle;margin-right:6px;"> Sign-In Points</div>
             `;
 
           div.querySelector(".legend-toggle").onclick = function () {

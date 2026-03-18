@@ -14,7 +14,7 @@
 
 .hunting-title{
     color: #EFE;
-    font-family: Inter;
+    
     font-size: 32px;
     font-style: normal;
     font-weight: 650;
@@ -30,7 +30,7 @@
     text-align: center;
     display: inline-flex;
     justify-content: center;
-    padding: 0px 0px 30px 0px;
+    padding: 0px 0px 15px 0px;
     margin: 0;
 }
 
@@ -45,21 +45,99 @@
 }
 
 .hunting-nav-items{
-    color: #EFE;
+    color: #2F5848;
 
     /* Body text */
-    font-family: Inter;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 150%; /* 30px */
+    font-weight: 400;
+    
+    
+    background: #D3EAE4;
+    white-space: nowrap;
+    border-radius: 10px;
+    border: 1px solid #D3EAE4;
+    cursor: pointer;
+    user-select: none;
     text-align: center;
-    padding: 0;
+
+    padding: 5px 10px;
     margin: 0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+
+}
+
+.hunting-nav-items:hover{
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.hunting-nav-items:active{
+    transform: translateY(1px);
+    box-shadow: none;
 }
 /* -------------------------------------------------------------- */
 /* Main CSS */
-@media (min-width:500px){
+@media (min-width:575px){
+    .hunting-header{
+        width: 100%;
+        height: 150px;
+        flex-shrink: 0;
+        background: #2F5848;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .hunting-title{
+        color: #EFE;
+        
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 650;
+        line-height: 150%; /* 72px */
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+
+        width: 100%;
+        text-align: center;
+        display: inline-flex;
+        justify-content: flex-start;
+        padding: 46px 10px 46px 20px;
+        margin: 0;
+    }
+
+    .hunting-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--Spacing-M, 14px);
+        padding: 46px 20px 46px 0px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .hunting-nav-items{
+        /* Body text */
+        
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 30px */
+
+        padding: 4px 7px;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* Small Desktop CSS */
+@media (min-width:1000px){
     .hunting-header{
         width: 100%;
         height: 164px;
@@ -74,7 +152,66 @@
 
     .hunting-title{
         color: #EFE;
-        font-family: Inter;
+        
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 650;
+        line-height: 150%; /* 72px */
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+
+        width: 100%;
+        text-align: center;
+        display: inline-flex;
+        justify-content: flex-start;
+        padding: 46px 0px 46px 40px;
+        margin: 0;
+    }
+
+    .hunting-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--Spacing-M, 24px);
+        padding: 50px 40px 40px 0px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .hunting-nav-items{
+        /* Body text */
+        
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 30px */
+
+        padding: 4px 12px;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* Full Desktop CSS */
+@media (min-width:1500px){
+    .hunting-header{
+        width: 100%;
+        height: 164px;
+        flex-shrink: 0;
+        background: #2F5848;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .hunting-title{
+        color: #EFE;
+        
         font-size: 48px;
         font-style: normal;
         font-weight: 650;
@@ -90,7 +227,7 @@
         text-align: center;
         display: inline-flex;
         justify-content: flex-start;
-        padding: 46px 197px 46px 80px;
+        padding: 46px 20px 46px 80px;
         margin: 0;
     }
 
@@ -105,13 +242,13 @@
     }
 
     .hunting-nav-items{
-        color: #EFE;
-
         /* Body text */
-        font-family: Inter;
+        
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
         line-height: 150%; /* 30px */
+
+        padding: 5px 15px;
     }
 }

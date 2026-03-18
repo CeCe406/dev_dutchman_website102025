@@ -36,7 +36,7 @@
 
 .wildlife-site-title{
     color: #FFF;
-    font-family: Inter;
+    
     font-size: 32px;
     font-style: normal;
     font-weight: 650;
@@ -67,14 +67,36 @@
 }
 
 .wildlife-nav-items{
-    color: #FFF;
+    color: #2F5848;
 
     /* Body text */
-    font-family: Inter;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 150%; /* 30px */
+    font-weight: 400;
+    
+    
+    background: #D3EAE4;
+    white-space: nowrap;
+    border-radius: 10px;
+    border: 1px solid #2F5848;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+
+    padding: 6px 10px;
+    margin: 0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+
+}
+
+.wildlife-nav-items:hover{
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.wildlife-nav-items:active{
+    transform: translateY(1px);
+    box-shadow: none;
 }
 
 .wildlife-page-title-container{
@@ -93,7 +115,7 @@
     color: #FFF;
     text-align: center;
     align-items: center;
-    font-family: Inter;
+    
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -110,7 +132,7 @@
     white-space: normal;
 
     /* Subheading */
-    font-family: Inter;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -119,7 +141,247 @@
 }
 /* -------------------------------------------------------------- */
 /* Main CSS */
-@media (min-width:500px){
+@media (min-width:575px){
+    .wildlife-header{
+        width: 100%;
+        height: 500px;
+        flex-shrink: 0;
+        background: url("../../photos/Wildlife/AR_29 08.26.24.jpg") lightgray 50% / cover no-repeat;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        display: inline-flex;
+    }
+
+    .wildlife-dimmer{
+        width: 100%;
+        height: 500px;
+        flex-shrink: 0;
+        background: rgba(0, 0, 0, 0.24);
+        margin: 0;
+        padding: 0;
+        align-items:center;
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .wildlife-top{
+        width: 100%;
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .wildlife-site-title{
+        color: #FFF;
+        
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 650;
+        line-height: 150%; /* 72px */
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+
+        width: 100%;
+        text-align: center;
+        display: inline-flex;
+        justify-content: flex-start;
+        padding: 60px 10px 0px 10px;
+        margin: 0;
+    }
+
+    .wildlife-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--Spacing-M, 10px);
+        padding: 60px 10px 0px 0px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .wildlife-nav-items{
+        /* Body text */
+        
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 30px */
+
+        padding: 4px 7px;
+    }
+
+    .wildlife-page-title-container{
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin:0;
+        padding: 50px 40px 0px 40px
+    }
+
+    .wildlife-page-title{
+        width: 100%;
+        height: 100%;
+        color: #FFF;
+        text-align: center;
+        align-items: center;
+        
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .wildlife-subtitle{
+        width: 100%;
+        height: 100%;
+        color: #FFF;
+        text-align: center;
+        align-items: center;
+
+        /* Subheading */
+        
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* Small Desktop CSS */
+@media (min-width:1000px){
+    .wildlife-header{
+        width: 100%;
+        height: 600px;
+        flex-shrink: 0;
+        background: url("../../photos/Wildlife/AR_29 08.26.24.jpg") lightgray 50% / cover no-repeat;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        display: inline-flex;
+    }
+
+    .wildlife-dimmer{
+        width: 100%;
+        height: 600px;
+        flex-shrink: 0;
+        background: rgba(0, 0, 0, 0.24);
+        margin: 0;
+        padding: 0;
+        align-items:center;
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .wildlife-top{
+        width: 100%;
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .wildlife-site-title{
+        color: #FFF;
+        
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 650;
+        line-height: 150%; /* 72px */
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+
+        width: 100%;
+        text-align: center;
+        display: inline-flex;
+        justify-content: flex-start;
+        padding: 46px 0px 46px 40px;
+        margin: 0;
+    }
+
+    .wildlife-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--Spacing-M, 25px);
+        padding: 50px 40px 40px 0px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .wildlife-nav-items{
+        /* Body text */
+        
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 30px */
+
+        padding: 4px 10px;
+    }
+
+    .wildlife-page-title-container{
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin:0;
+        padding: 80px 40px 0px 40px
+    }
+
+    .wildlife-page-title{
+        width: 100%;
+        height: 100%;
+        color: #FFF;
+        text-align: center;
+        align-items: center;
+        
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .wildlife-subtitle{
+        width: 100%;
+        height: 100%;
+        color: #FFF;
+        text-align: center;
+        align-items: center;
+
+        /* Subheading */
+        
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* Full Desktop CSS */
+@media (min-width:1500px){
     .wildlife-header{
         width: 100%;
         height: 720px;
@@ -155,7 +417,7 @@
 
     .wildlife-site-title{
         color: #FFF;
-        font-family: Inter;
+        
         font-size: 48px;
         font-style: normal;
         font-weight: 650;
@@ -171,7 +433,7 @@
         text-align: center;
         display: inline-flex;
         justify-content: flex-start;
-        padding: 46px 197px 46px 80px;
+        padding: 46px 20px 46px 80px;
         margin: 0;
     }
 
@@ -179,21 +441,21 @@
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
-        gap: var(--Spacing-M, 48px);
+        gap: var(--Spacing-M, 32px);
         padding: 50px 80px 40px 0px;
         margin: 0;
         width: 100%;
     }
 
     .wildlife-nav-items{
-        color: #FFF;
-
         /* Body text */
-        font-family: Inter;
+        
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
         line-height: 150%; /* 30px */
+
+        padding: 5px 12px;
     }
 
     .wildlife-page-title-container{
@@ -212,7 +474,7 @@
         color: #FFF;
         text-align: center;
         align-items: center;
-        font-family: Inter;
+        
         font-size: 64px;
         font-style: normal;
         font-weight: 700;
@@ -228,7 +490,7 @@
         align-items: center;
 
         /* Subheading */
-        font-family: Inter;
+        
         font-size: 24px;
         font-style: normal;
         font-weight: 400;

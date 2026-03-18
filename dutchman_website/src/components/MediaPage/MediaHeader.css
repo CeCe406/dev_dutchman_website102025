@@ -14,7 +14,7 @@
 
 .media-title{
     color: #020202;
-    font-family: Inter;
+    
     font-size: 32px;
     font-style: normal;
     font-weight: 650;
@@ -30,7 +30,7 @@
     text-align: center;
     display: inline-flex;
     justify-content: center;
-    padding: 0px 0px 30px 0px;
+    padding: 0px 0px 15px 0px;
     margin: 0;
 }
 
@@ -45,21 +45,40 @@
 }
 
 .media-nav-items{
-    color: #020202;
+    color: white;
 
     /* Body text */
-    font-family: Inter;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 150%; /* 30px */
+    font-weight: 400;
+    
+    
+    background: #6B3824; /*optional other choice: #4F291A */
+    white-space: nowrap;
+    border-radius: 10px;
+    border: 1px solid #6B3824; /*optional other choice: #4F291A */
+    cursor: pointer;
+    user-select: none;
     text-align: center;
-    padding: 0;
+
+    padding: 6px 10px;
     margin: 0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+
+}
+
+.media-nav-items:hover{
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.media-nav-items:active{
+    transform: translateY(1px);
+    box-shadow: none;
 }
 /* -------------------------------------------------------------- */
 /* Main CSS */
-@media (min-width:500px){
+@media (min-width:575px){
     .media-header{
         width: 100%;
         height: 164px;
@@ -74,7 +93,125 @@
 
     .media-title{
         color: #020202;
-        font-family: Inter;
+        
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 650;
+        line-height: 150%; /* 72px */
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+
+        width: 100%;
+        text-align: center;
+        display: inline-flex;
+        justify-content: flex-start;
+        padding: 46px 5px 46px 20px;
+        margin: 0;
+    }
+
+    .media-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--Spacing-M, 10px);
+        padding: 46px 20px 40px 0px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .media-nav-items{
+        /* Body text */
+        
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 30px */
+
+        padding: 4px 6px;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* Small Desktop CSS */
+@media (min-width:1000px){
+    .media-header{
+        width: 100%;
+        height: 164px;
+        flex-shrink: 0;
+        background: #964F33;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .media-title{
+        color: #020202;
+        
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 650;
+        line-height: 150%; /* 72px */
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+
+        width: 100%;
+        text-align: center;
+        display: inline-flex;
+        justify-content: flex-start;
+        padding: 46px 10px 46px 40px;
+        margin: 0;
+    }
+
+    .media-nav{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--Spacing-M, 24px);
+        padding: 50px 40px 40px 0px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .media-nav-items{
+        /* Body text */
+        
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 30px */
+
+        padding: 4px 12px;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* Full Desktop CSS */
+@media (min-width:1500px){
+    .media-header{
+        width: 100%;
+        height: 164px;
+        flex-shrink: 0;
+        background: #964F33;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .media-title{
+        color: #020202;
+        
         font-size: 48px;
         font-style: normal;
         font-weight: 650;
@@ -90,7 +227,7 @@
         text-align: center;
         display: inline-flex;
         justify-content: flex-start;
-        padding: 46px 197px 46px 80px;
+        padding: 46px 20px 46px 80px;
         margin: 0;
     }
 
@@ -98,20 +235,20 @@
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
-        gap: var(--Spacing-M, 48px);
+        gap: var(--Spacing-M, 32px);
         padding: 50px 80px 40px 0px;
         margin: 0;
         width: 100%;
     }
 
     .media-nav-items{
-        color: #020202;
-
         /* Body text */
-        font-family: Inter;
+        
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
         line-height: 150%; /* 30px */
+
+        padding: 4px 15px;
     }
 }

@@ -1,6 +1,6 @@
 import Header from "./MediaPage/MediaHeader";
 import Main from "./MediaPage/MediaMain";
-import Footer from "./MediaPage/MediaFooter";
+import Footer from "./HomePage/Footer";
 
 const Media = () => {
   return (

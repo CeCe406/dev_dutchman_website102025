@@ -1,7 +1,7 @@
 import WildHeader from "./WildlifePage/WildlifeHeader";
 import WildMain from "./WildlifePage/WildlifeMain";
 import BirdObservations from "./WildlifePage/BirdDashboard";
-import WildFooter from "./WildlifePage/WildlifeFooter";
+import WildFooter from "./HomePage/Footer";
 
 const Wildlife = () => {
   return (

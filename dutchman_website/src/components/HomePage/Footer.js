@@ -25,6 +25,7 @@ export default function Footer() {
                     </Link>
                 </div>
             </div>
+            <div className='update-info'>Updated Through March 20th, 2026</div>
         </div>
     )
 }

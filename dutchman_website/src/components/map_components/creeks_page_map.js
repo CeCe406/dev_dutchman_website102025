@@ -29,9 +29,13 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
       ).addTo(mapRef.current);
 
       const imageryLayer = L.tileLayer(
-        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}",
         {
-          attribution: 'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, USDA FSA, USGS, AeroGRID, IGN, and the GIS User Community'
+          attribution:
+            '© Stadia Maps | © OSM',
+          ext: "jpg",
+          bounds: projectBounds,
+          noWrap: true
         }
       ).addTo(mapRef.current);
 
@@ -69,7 +73,7 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
       // --- Load streams layer ---
       const loadLayers = async () => {
         try {
-          const response = await fetch(`${process.env.PUBLIC_URL}/geojsons/streams_in_dutchman.geojson`);
+          const response = await fetch("geojsons/streams_in_dutchman.geojson");
           const data = await response.json();
 
           const onEachFeature = (feature, layer) => {
@@ -77,36 +81,14 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
               click: () => {
                 const info = feature.properties?.Info || "No info available.";
                 const photos = feature.properties?.PHOTOS || [];
-
-
                 onCreekClick({ info, photos });
               },
-
-              // Build the same photo section HTML, but don't attach it to a popup
-              // let photoHTML = "";
-              // if (photos.length > 0) {
-              //   photoHTML += `<div style="margin-top: 8px;">`;
-              //   photos.forEach((file) => {
-              //     photoHTML += `
-              // <img 
-              //   src="${process.env.PUBLIC_URL}/creek_photos/${file}"
-              //   alt="popup photo" 
-              //   data-photo="${file}" 
-              //   style="width: 60px; height: auto; margin: 5px; cursor: pointer; border-radius: 4px;" 
-              // />`;
-              //   });
-              //   photoHTML += `</div>`;
-              //   // }
-
-              //   onCreekClick({ info, photos });
-              // },
-
               mouseover: () => {
                 layer.setStyle({ color: "#0400ffff", weight: 6 });
               },
               mouseout: () => {
                 layer.setStyle({ color: "#1a5ae4", weight: 4 });
-              },
+              }
             });
           };
           // invisable buffer layer to help w/ clicking UI
