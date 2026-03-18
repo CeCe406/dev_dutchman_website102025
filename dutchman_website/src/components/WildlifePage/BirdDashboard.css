@@ -111,9 +111,21 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
+/* Scrolling for family chart on mobile */
+.bird-family-chart {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.bird-family-chart .recharts-wrapper {
+    min-width: inline-block;
+}
+
 /* -------------------------------------------------------------- */
 /* Main CSS */
-@media (min-width:500px){
+@media (min-width:500px) {
     .bird-dashboard {
         max-height: 600px;
         overflow-y: auto;

@@ -1,17 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./CreeksMain.css";
 import Map from "../map_components/creeks_page_map"
 
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+
 export default function Main() {
     const [selectedCreekInfo, setSelectedCreekInfo] = useState(null);
     const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+    const lightboxRef = useRef(null);
+    const scrollPos = useRef(0);
 
     const handleCreekClick = ({ info, photos }) => {
         setSelectedCreekInfo({ info, photos });
     };
+
+    const openLightbox = (index) => {
+        scrollPos.current = window.scrollY;
+        setLightboxIndex(index);
+        setLightboxOpen(true);
+    };
+
+    const closeLightbox = () => {
+        setLightboxOpen(false);
+        window.scrollTo(0, scrollPos.current);
+    };
+
+    // keep scroll position when user closes lighboxes of creek photos
+    useEffect(() => {
+        const target = lightboxRef.current;
+        if (lightboxOpen && target) disableBodyScroll(target);
+        else if (target) enableBodyScroll(target);
+        return () => {
+            if (target) enableBodyScroll(target);
+        };
+    }, [lightboxOpen]);
 
     return (
         <div className='creeks-main-container'>
@@ -23,7 +49,6 @@ export default function Main() {
                 <div className='creeks-right-column'>
                     <h1 className='creeks-overview-title'>Creek Information</h1>
                     <div className='creeks-container'>
-
                         {selectedCreekInfo ? (
                             <div className='creek-info'>
                                 <p>{selectedCreekInfo.info}</p>
@@ -35,14 +60,17 @@ export default function Main() {
                                                 key={i}
                                                 src={`/creek_photos/${photo}`}
                                                 alt={`Creek ${i + 1}`}
-                                                onClick={() => setLightboxOpen(true)}
+                                                onClick={() => openLightbox(i)}
                                             />
                                         ))}
                                     </div>
                                 )}
+
                                 <Lightbox
+                                    ref={lightboxRef}
                                     open={lightboxOpen}
-                                    close={() => setLightboxOpen(false)}
+                                    close={closeLightbox}
+                                    index={lightboxIndex}
                                     slides={
                                         selectedCreekInfo.photos?.map((p) => ({ src: `/creek_photos/${p}` })) || []
                                     }
@@ -52,7 +80,6 @@ export default function Main() {
                             <p>Click a creek on the map to read more information.</p>
                         )}
                     </div>
-
                 </div>
             </div>
         </div>
