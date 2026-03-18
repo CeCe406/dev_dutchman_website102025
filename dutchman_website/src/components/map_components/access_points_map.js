@@ -11,7 +11,7 @@ import 'yet-another-react-lightbox/styles.css';
 
 // custom access point icon
 var accessIcon = L.icon({
-  iconUrl: "${process.env.PUBLIC_URL}/dutchman_website/geojsons/access_icon.png",
+  iconUrl: `${process.env.PUBLIC_URL}/dutchman_website/geojsons/access_icon.png`,
   iconSize: [36, 36],
   iconAnchor: [18, 18],
   popupAnchor: [-3, -18]
@@ -21,7 +21,7 @@ var accessIcon = L.icon({
 
 //custom block managment point icon
 var blockIcon = L.icon({
-  iconUrl: "${process.env.PUBLIC_URL}/dutchman_website/geojsons/block_icon.png",
+  iconUrl: `${process.env.PUBLIC_URL}/dutchman_website/geojsons/block_icon.png`,
   iconSize: [24, 24],
   iconAnchor: [12, 12],
   popupAnchor: [-3, -12]
@@ -117,12 +117,13 @@ const LeafletComponent = () => {
         popupContent += `<div style="margin-top: 8px;">`;
         feature.properties.photo.forEach((file) => {
           popupContent += `
-            <img 
-              src= {"${process.env.PUBLIC_URL}/dutchman_website/access_point_photos/${file}"}" 
-              alt="popup photo" 
-              data-photo="${file}" 
-              style="width: 60px; height: auto; margin: 5px; cursor: pointer; border-radius: 4px;" 
-            />`;
+  <img 
+    src="${process.env.PUBLIC_URL}/dutchman_website/access_point_photos/${file}" 
+    alt="popup photo"
+    data-photo="${file}"
+    style="width: 60px; height: auto; margin: 5px; cursor: pointer; border-radius: 4px;" 
+  />
+`;
         });
         popupContent += `</div>`;
       }
@@ -172,11 +173,11 @@ const LeafletComponent = () => {
     const loadLayers = async () => {
       try {
         const [wetlandRes, boundaryRes, linesRes, pointsRes, accessRes] = await Promise.all([
-          fetch("${process.env.PUBLIC_URL}/dutchman_website/geojsons/Wetland_Boundaries.geojson"),
-          fetch("${process.env.PUBLIC_URL}/dutchman_website/geojsons/Dutchman_Boundary.geojson"),
-          fetch("${process.env.PUBLIC_URL}/dutchman_website/geojsons/access_roads.geojson"),
-          fetch("${process.env.PUBLIC_URL}/dutchman_website/geojsons/sign_in_points.geojson"),
-          fetch("${process.env.PUBLIC_URL}/dutchman_website/geojsons/access_points.geojson"),
+          fetch(`${process.env.PUBLIC_URL}/dutchman_website/geojsons/Wetland_Boundaries.geojson`),
+          fetch(`${process.env.PUBLIC_URL}/dutchman_website/geojsons/Dutchman_Boundary.geojson`),
+          fetch(`${process.env.PUBLIC_URL}/dutchman_website/geojsons/access_roads.geojson`),
+          fetch(`${process.env.PUBLIC_URL}/dutchman_website/geojsons/sign_in_points.geojson`),
+          fetch(`${process.env.PUBLIC_URL}/dutchman_website/geojsons/access_points.geojson`),
         ]);
 
         const [wetlandData, boundaryData, linesData, pointsData, accessData] = await Promise.all([
