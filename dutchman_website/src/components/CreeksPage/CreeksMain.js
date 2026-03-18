@@ -58,7 +58,7 @@ export default function Main() {
                                         {selectedCreekInfo.photos.map((photo, i) => (
                                             <img
                                                 key={i}
-                                                src={`/creek_photos/${photo}`}
+                                                src={`${process.env.PUBLIC_URL}/creek_photos/${photo}`}
                                                 alt={`Creek ${i + 1}`}
                                                 onClick={() => openLightbox(i)}
                                             />
@@ -72,7 +72,7 @@ export default function Main() {
                                     close={closeLightbox}
                                     index={lightboxIndex}
                                     slides={
-                                        selectedCreekInfo.photos?.map((p) => ({ src: `/creek_photos/${p}` })) || []
+                                        selectedCreekInfo.photos?.map((p) => ({ src: `${process.env.PUBLIC_URL}/creek_photos/${p}` })) || []
                                     }
                                 />
                             </div>

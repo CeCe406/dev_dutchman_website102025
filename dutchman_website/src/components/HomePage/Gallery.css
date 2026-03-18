@@ -32,8 +32,9 @@
     background: #FFFFFF;
     position: relative;
     padding: 0;
-    margin:0;
+    margin: 0;
 }
+
 /* main image container */
 .main-image-container {
     flex: 1;
@@ -43,7 +44,7 @@
     background: #FFFFFF;
     position: relative;
     padding: 0;
-    margin:0;
+    margin: 0;
 }
 
 .main-image {
@@ -53,6 +54,7 @@
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
     border: 3px solid var(--color-clay);
 }
+
 .main-image {
     max-width: 90%;
     /* max-height: 85vh; */
@@ -80,7 +82,6 @@
     cursor: pointer;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-}
     padding: 0.5rem 1rem;
     border-radius: 6px;
 }
@@ -123,10 +124,10 @@
     transition: border 0.25s ease, transform 0.2s ease;
     background: var(--color-beige);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    padding:0;
-    margin:0;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .thumbnail:hover {
@@ -146,27 +147,30 @@
     text-align: center;
     align-items: center;
     padding: 0px;
-    margin:0;
-    margin:0;
+    margin: 0;
+    margin: 0;
 }
 
-.gallery-intro{
+.gallery-intro {
     /* width: 100%; */
     text-align: left;
     color: #828282;
-    
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 36px */
-    line-height: 150%; /* 36px */
+    line-height: 150%;
+    /* 36px */
+    line-height: 150%;
+    /* 36px */
     padding: 30px 40px 0px 40px;
-    margin:0;
-    margin:0;
+    margin: 0;
+    margin: 0;
 }
+
 /* -------------------------------------------------------------- */
 /* Main CSS */
-@media (min-width:500px){
+@media (min-width:500px) {
     .gallery-page {
         display: flex;
         width: 70%;
@@ -200,7 +204,7 @@
         background: #FFFFFF;
         position: relative;
         padding: 0;
-        margin:0;
+        margin: 0;
     }
 
     .main-image {
@@ -262,8 +266,8 @@
         transition: border 0.25s ease, transform 0.2s ease;
         background: var(--color-beige);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
     }
 
     .thumbnail:hover {
@@ -283,26 +287,27 @@
         text-align: center;
         align-items: center;
         padding: 0px;
-        margin:0;
+        margin: 0;
     }
 
-    .gallery-intro{
+    .gallery-intro {
         /* width: 100%; */
         text-align: left;
         color: #828282;
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 150%; /* 36px */
+        line-height: 150%;
+        /* 36px */
         padding: 50px 60px 0px 60px;
-        margin:0;
+        margin: 0;
     }
 }
 
 /* -------------------------------------------------------------- */
 /* Small Desktop CSS */
-@media (min-width:1000px){
+@media (min-width:1000px) {
     .gallery-page {
         display: flex;
         width: 70%;
@@ -336,7 +341,7 @@
         background: #FFFFFF;
         position: relative;
         padding: 0;
-        margin:0;
+        margin: 0;
     }
 
     .main-image {
@@ -398,8 +403,8 @@
         transition: border 0.25s ease, transform 0.2s ease;
         background: var(--color-beige);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
     }
 
     .thumbnail:hover {
@@ -419,26 +424,27 @@
         text-align: center;
         align-items: flex-start;
         padding: 0px;
-        margin:0;
+        margin: 0;
     }
 
-    .gallery-intro{
+    .gallery-intro {
         width: 30%;
         text-align: left;
         color: #828282;
-        
+
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
-        line-height: 150%; /* 36px */
+        line-height: 150%;
+        /* 36px */
         padding: 30px 40px 0px 40px;
-        margin:0;
+        margin: 0;
     }
 }
 
 /* -------------------------------------------------------------- */
 /* Full Desktop CSS */
-@media (min-width:1500px){
+@media (min-width:1500px) {
     .gallery-page {
         display: flex;
         width: 70%;
@@ -472,7 +478,7 @@
         background: #FFFFFF;
         position: relative;
         padding: 0;
-        margin:0;
+        margin: 0;
     }
 
     .main-image {
@@ -534,8 +540,8 @@
         transition: border 0.25s ease, transform 0.2s ease;
         background: var(--color-beige);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
     }
 
     .thumbnail:hover {
@@ -554,23 +560,26 @@
         flex-direction: row;
         text-align: center;
         padding: 0px;
-        margin:0;
-        margin:0;
+        margin: 0;
+        margin: 0;
     }
 
-    .gallery-intro{
-    .gallery-intro{
-        width: 30%;
-        text-align: left;
-        color: #828282;
-        
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%; /* 36px */
-        line-height: 150%; /* 36px */
-        padding: 30px 40px 0px 40px;
-        margin:0;
-        margin:0;
+    .gallery-intro {
+        .gallery-intro {
+            width: 30%;
+            text-align: left;
+            color: #828282;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            /* 36px */
+            line-height: 150%;
+            /* 36px */
+            padding: 30px 40px 0px 40px;
+            margin: 0;
+            margin: 0;
+        }
     }
 }
