@@ -421,7 +421,6 @@
 
     .creeks-site-title {
         color: #FFF;
-        font-family: Inter;
         font-size: 24px;
         font-style: normal;
         font-weight: 650;
@@ -456,7 +455,6 @@
         color: #FFF;
 
         /* Body text */
-        font-family: Inter;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -480,7 +478,6 @@
         color: #FFF;
         text-align: center;
         align-items: center;
-        font-family: Inter;
         font-size: 25px;
         font-style: normal;
         font-weight: 700;
@@ -496,7 +493,7 @@
         align-items: center;
 
         /* Subheading */
-        font-family: Inter;
+        
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -543,7 +540,7 @@
 
     .creeks-site-title {
         color: #FFF;
-        font-family: Inter;
+        
         font-size: 32px;
         font-style: normal;
         font-weight: 650;
@@ -578,7 +575,7 @@
         color: #FFF;
 
         /* Body text */
-        font-family: Inter;
+        
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -602,7 +599,7 @@
         color: #FFF;
         text-align: center;
         align-items: center;
-        font-family: Inter;
+        
         font-size: 48px;
         font-style: normal;
         font-weight: 700;
@@ -618,7 +615,7 @@
         align-items: center;
 
         /* Subheading */
-        font-family: Inter;
+        
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
