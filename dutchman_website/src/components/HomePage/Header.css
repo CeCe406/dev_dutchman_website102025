@@ -35,8 +35,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: var(--Spacing-M, 15px);
-    padding: 0px 0px 20px 0px;
+    gap: var(--Spacing-M, 8px);
+    padding: 0px 0px 5px 0px;
     margin: 0;
     width: 100%;
 }
@@ -58,7 +58,7 @@
     user-select: none;
     text-align: center;
 
-    padding: 6px 10px;
+    padding: 4px 8px;
     margin: 0;
 
     
