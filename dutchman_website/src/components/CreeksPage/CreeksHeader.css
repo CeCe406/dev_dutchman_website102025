@@ -36,7 +36,7 @@
 
 .creeks-site-title {
     color: #FFF;
-    
+
     font-size: 32px;
     font-style: normal;
     font-weight: 650;
@@ -68,15 +68,15 @@
 }
 
 .creeks-nav-items {
-    color: #2F5848;
+    color: white;
 
     /* Body text */
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    
-    
-    background: #D3EAE4;
+
+
+    background: #2F5848;
     white-space: nowrap;
     border-radius: 10px;
     border: 1px solid #2F5848;
@@ -86,16 +86,18 @@
 
     padding: 4px 8px;
     margin: 0;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
 
 }
 
-.creeks-nav-items:hover{
-    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+.creeks-nav-items:hover {
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
-.creeks-nav-items:active{
+.creeks-nav-items:active {
     transform: translateY(1px);
     box-shadow: none;
 }
@@ -116,7 +118,7 @@
     color: #FFF;
     text-align: center;
     align-items: center;
-    
+
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -132,16 +134,17 @@
     align-items: center;
 
     /* Subheading */
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     margin: 0;
     padding: 0px;
 }
+
 /* -------------------------------------------------------------- */
 /* Main CSS */
-@media (min-width:575px){
+@media (min-width:575px) {
     .creeks-header {
         width: 100%;
         height: 300px;
@@ -177,7 +180,7 @@
 
     .creeks-site-title {
         color: #FFF;
-        
+
         font-size: 24px;
         font-style: normal;
         font-weight: 650;
@@ -209,8 +212,9 @@
     }
 
     .creeks-nav-items {
+        color: white;
+
         /* Body text */
-        
         font-size: 13px;
         font-style: normal;
         font-weight: 500;
@@ -218,6 +222,7 @@
         /* 30px */
 
         padding: 4px 7px;
+        margin: 0;
     }
 
     .creeks-page-title-container {
@@ -236,7 +241,7 @@
         color: #FFF;
         text-align: center;
         align-items: center;
-        
+
         font-size: 25px;
         font-style: normal;
         font-weight: 700;
@@ -252,7 +257,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -263,7 +268,7 @@
 
 /* -------------------------------------------------------------- */
 /* Small Desktop CSS */
-@media (min-width:1000px){
+@media (min-width:1000px) {
     .creeks-header {
         width: 100%;
         height: 500px;
@@ -299,7 +304,7 @@
 
     .creeks-site-title {
         color: #FFF;
-        
+
         font-size: 32px;
         font-style: normal;
         font-weight: 650;
@@ -331,15 +336,14 @@
     }
 
     .creeks-nav-items {
+        color: white;
+
         /* Body text */
-        
-        font-size: 14px;
+        font-size: 15px;
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
         /* 30px */
-
-        padding: 5px 10px;
     }
 
     .creeks-page-title-container {
@@ -358,7 +362,7 @@
         color: #FFF;
         text-align: center;
         align-items: center;
-        
+
         font-size: 48px;
         font-style: normal;
         font-weight: 700;
@@ -374,7 +378,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -385,7 +389,7 @@
 
 /* -------------------------------------------------------------- */
 /* Full Desktop CSS */
-@media (min-width:1500px){
+@media (min-width:1500px) {
     .creeks-header {
         width: 100%;
         height: 300px;
@@ -452,14 +456,16 @@
     }
 
     .creeks-nav-items {
-        color: #FFF;
+        color: white;
 
         /* Body text */
-        font-size: 14px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
         /* 30px */
+
+        padding: 8px 15px;
     }
 
     .creeks-page-title-container {
@@ -493,7 +499,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -504,7 +510,7 @@
 
 /* -------------------------------------------------------------- */
 /* Small Desktop CSS */
-@media (min-width:1000px){
+@media (min-width:1000px) {
     .creeks-header {
         width: 100%;
         height: 500px;
@@ -540,7 +546,7 @@
 
     .creeks-site-title {
         color: #FFF;
-        
+
         font-size: 32px;
         font-style: normal;
         font-weight: 650;
@@ -572,15 +578,16 @@
     }
 
     .creeks-nav-items {
-        color: #FFF;
+        color: white;
 
         /* Body text */
-        
-        font-size: 16px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
         /* 30px */
+
+        padding: 8px 15px;
     }
 
     .creeks-page-title-container {
@@ -599,7 +606,7 @@
         color: #FFF;
         text-align: center;
         align-items: center;
-        
+
         font-size: 48px;
         font-style: normal;
         font-weight: 700;
@@ -615,7 +622,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -626,7 +633,7 @@
 
 /* -------------------------------------------------------------- */
 /* Full Desktop CSS */
-@media (min-width:1500px){
+@media (min-width:1500px) {
     .creeks-header {
         width: 100%;
         height: 720px;
@@ -662,7 +669,7 @@
 
     .creeks-site-title {
         color: #FFF;
-        
+
         font-size: 48px;
         font-style: normal;
         font-weight: 650;
@@ -695,7 +702,7 @@
 
     .creeks-nav-items {
         /* Body text */
-        
+
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
@@ -721,7 +728,7 @@
         color: #FFF;
         text-align: center;
         align-items: center;
-        
+
         font-size: 64px;
         font-style: normal;
         font-weight: 700;
@@ -737,7 +744,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 24px;
         font-style: normal;
         font-weight: 400;

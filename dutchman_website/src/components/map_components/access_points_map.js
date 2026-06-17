@@ -172,36 +172,99 @@ const LeafletComponent = () => {
     // Load layers
     const loadLayers = async () => {
       try {
-        const [wetlandRes, boundaryRes, linesRes, pointsRes, accessRes] = await Promise.all([
+        const [wetlandRes, boundaryRes, linesRes, pointsRes, accessRes, creekRes] = await Promise.all([
           fetch(`${process.env.PUBLIC_URL}/geojsons/Wetland_Boundaries.geojson`),
           fetch(`${process.env.PUBLIC_URL}/geojsons/Dutchman_Boundary.geojson`),
           fetch(`${process.env.PUBLIC_URL}/geojsons/access_roads.geojson`),
           fetch(`${process.env.PUBLIC_URL}/geojsons/sign_in_points.geojson`),
           fetch(`${process.env.PUBLIC_URL}/geojsons/access_points.geojson`),
+          fetch(`${process.env.PUBLIC_URL}/geojsons/streams_in_dutchman.geojson`)
         ]);
 
-        const [wetlandData, boundaryData, linesData, pointsData, accessData] = await Promise.all([
+        const [wetlandData, boundaryData, linesData, pointsData, accessData, creekData] = await Promise.all([
           wetlandRes.json(),
           boundaryRes.json(),
           linesRes.json(),
           pointsRes.json(),
           accessRes.json(),
+          creekRes.json()
         ]);
+
+        const creekLayer = L.geoJSON(creekData, {
+          style: {
+            color: "#1a5ae4",
+            weight: 4
+          },
+          onEachFeature: (feature, layer) => {
+            const name = feature.properties?.NAME;
+
+            if (name) {
+              layer.bindTooltip(name, {
+                permanent: true,
+                direction: "center",
+                className: "creek-label"
+              });
+            }
+          }
+        }).addTo(mapRef.current);
+
         // create and addd legend to map
         const legend = L.control({ position: "bottomright" });
 
         legend.onAdd = function (map) {
           const div = L.DomUtil.create("div", "info legend");
           div.innerHTML = `
-              <div class="legend-toggle">🗺️ Legend</div>
-              <div class="legend-content" style="display: none;">
-              <h4>Map Legend</h4>
-              <div><span style="background:#6df7f0ff; border:3px solid#003561ff;"></span> Wetland Boundary</div>
-              <div><span style=" border:3px solid #64e77a;"></span> Dutchman Property Boundary</div>
-              <div><span style="background:#ffe8b7; border:1px solid #000;"></span> Access Roads</div>
-              <div><img src="${process.env.PUBLIC_URL}/access_point_photos/access_icon.png" style="width:18px;height:18px;vertical-align:middle;margin-right:4px;"> Access Points</div>
-              <div><img src="${process.env.PUBLIC_URL}/access_point_photos/block_icon.png" style="width:14px;height:14px;vertical-align:middle;margin-right:6px;"> Sign-In Points</div>
-            `;
+  <div class="legend-toggle">🗺️ Legend</div>
+  <div class="legend-content" style="display: none;">
+    <h4>Map Legend</h4>
+
+    <div>
+      <span style="background:#6df7f0ff; border:3px solid #003561ff;"></span>
+      Wetland Boundary
+    </div>
+
+    <div>
+      <span style="border:3px solid #64e77a;"></span>
+      Dutchman Property Boundary
+    </div>
+
+    <div>
+      <span style="
+        display:inline-block;
+        width: 25px;
+        height: 0;
+        border-top: 3px solid #ffe8b7;
+        margin-right: 6px;
+        vertical-align: middle;
+      "></span>
+      Access Roads
+    </div>
+
+    <div>
+      <span style="
+        display:inline-block;
+        width: 25px;
+        height: 0;
+        border-top: 3px solid #1a5ae4;
+        margin-right: 6px;
+        vertical-align: middle;
+      "></span>
+      Creeks
+    </div>
+
+    <div>
+      <img src="${process.env.PUBLIC_URL}/access_point_photos/access_icon.png"
+        style="width:18px;height:18px;vertical-align:middle;margin-right:4px;">
+      Access Points
+    </div>
+
+    <div>
+      <img src="${process.env.PUBLIC_URL}/access_point_photos/block_icon.png"
+        style="width:14px;height:14px;vertical-align:middle;margin-right:6px;">
+      Sign-In Points
+    </div>
+  </div>
+`;
 
           div.querySelector(".legend-toggle").onclick = function () {
             const content = div.querySelector(".legend-content");

@@ -7,7 +7,7 @@ export default function Header() {
             <div className='wildlife-dimmer'>
                 <div className='wildlife-top'>
                     <h1 className='wildlife-site-title'>
-                        The Dutchman Website
+                        The Dutchman Wetlands
                     </h1>
                     <div className='wildlife-nav'>
                         <Link to='/'>

@@ -14,6 +14,32 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
 
+  const getLineLabelPoint = (coords) => {
+    if (!coords || coords.length < 2) return null;
+
+    const midIndex = Math.floor(coords.length / 2);
+
+    const p1 = coords[midIndex - 1];
+    const p2 = coords[midIndex];
+
+    if (!p1 || !p2) return null;
+
+    const latlng = L.latLng(
+      (p1[1] + p2[1]) / 2,
+      (p1[0] + p2[0]) / 2
+    );
+
+    const rawAngle =
+      (Math.atan2(
+        p2[0] - p1[0], // lat difference (y)
+        p2[1] - p1[1]  // lng difference (x)
+      ) * 180) / Math.PI;
+
+    const angle = rawAngle + 180;
+
+    return { latlng, angle };
+  };
+
 
   useEffect(() => {
     // make map if map doesn't exist yet
@@ -77,6 +103,15 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
           const data = await response.json();
 
           const onEachFeature = (feature, layer) => {
+            const name = feature.properties?.NAME;
+            if (name) {
+              layer.bindTooltip(name, {
+                permanent: true,
+                direction: "center",
+                className: "creek-label"
+              });
+            }
+
             layer.on({
               click: () => {
                 const info = feature.properties?.Info || "No info available.";
@@ -90,7 +125,9 @@ const CreeksLeafletComponent = ({ onCreekClick }) => {
                 layer.setStyle({ color: "#1a5ae4", weight: 4 });
               }
             });
+
           };
+
           // invisable buffer layer to help w/ clicking UI
           L.geoJSON(data, {
             style: {

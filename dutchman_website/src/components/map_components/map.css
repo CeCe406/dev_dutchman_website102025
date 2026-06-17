@@ -288,7 +288,7 @@
 
 /* -------------------------------------------------------------- */
 /* Small Desktop CSS */
-@media (min-width:1000px){
+@media (min-width:1000px) {
     .child-map-container {
         width: 90%;
         height: 100%;
@@ -431,7 +431,7 @@
 
 /* -------------------------------------------------------------- */
 /* Full Desktop CSS */
-@media (min-width:1500px){
+@media (min-width:1500px) {
     .child-map-container {
         width: 90%;
         height: 100%;
@@ -553,7 +553,15 @@
         border: 1px solid #777;
     }
 
-
+    .creek-label {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        color: #1a3d66;
+        font-size: 12px;
+        font-weight: 500;
+        text-shadow: 0 0 3px white;
+    }
 
     /* responsive adjustments for mobile */
     /* @media (max-width: 480px) {

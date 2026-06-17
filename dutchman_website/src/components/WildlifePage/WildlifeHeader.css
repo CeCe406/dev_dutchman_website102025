@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------- */
 /* Mobile CSS */
-.wildlife-header{
+.wildlife-header {
     width: 100%;
     height: 500px;
     flex-shrink: 0;
@@ -12,19 +12,19 @@
     flex-direction: column;
 }
 
-.wildlife-dimmer{
+.wildlife-dimmer {
     width: 100%;
     height: 500px;
     flex-shrink: 0;
     background: rgba(0, 0, 0, 0.24);
     margin: 0;
     padding: 0;
-    align-items:center;
+    align-items: center;
     display: inline-flex;
     flex-direction: column;
 }
 
-.wildlife-top{
+.wildlife-top {
     width: 100%;
     flex-shrink: 0;
     margin: 0;
@@ -34,13 +34,14 @@
     flex-direction: column;
 }
 
-.wildlife-site-title{
+.wildlife-site-title {
     color: #FFF;
-    
+
     font-size: 32px;
     font-style: normal;
     font-weight: 650;
-    line-height: 150%; /* 72px */
+    line-height: 150%;
+    /* 72px */
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
@@ -56,7 +57,7 @@
     margin: 0;
 }
 
-.wildlife-nav{
+.wildlife-nav {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -66,16 +67,16 @@
     width: 100%;
 }
 
-.wildlife-nav-items{
-    color: #2F5848;
+.wildlife-nav-items {
+    color: white;
 
     /* Body text */
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    
-    
-    background: #D3EAE4;
+
+
+    background: #2F5848;
     white-space: nowrap;
     border-radius: 10px;
     border: 1px solid #2F5848;
@@ -85,37 +86,39 @@
 
     padding: 4px 8px;
     margin: 0;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
 
 }
 
-.wildlife-nav-items:hover{
-    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+.wildlife-nav-items:hover {
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
-.wildlife-nav-items:active{
+.wildlife-nav-items:active {
     transform: translateY(1px);
     box-shadow: none;
 }
 
-.wildlife-page-title-container{
+.wildlife-page-title-container {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
-.wildlife-page-title{
+.wildlife-page-title {
     width: 100%;
     height: 100%;
     color: #FFF;
     text-align: center;
     align-items: center;
-    
+
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -123,7 +126,7 @@
     padding: 0px;
 }
 
-.wildlife-subtitle{
+.wildlife-subtitle {
     width: 80%;
     height: 100%;
     color: #FFF;
@@ -132,17 +135,18 @@
     white-space: normal;
 
     /* Subheading */
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     margin: 0;
     padding: 0px;
 }
+
 /* -------------------------------------------------------------- */
 /* Main CSS */
-@media (min-width:575px){
-    .wildlife-header{
+@media (min-width:575px) {
+    .wildlife-header {
         width: 100%;
         height: 500px;
         flex-shrink: 0;
@@ -153,19 +157,19 @@
         display: inline-flex;
     }
 
-    .wildlife-dimmer{
+    .wildlife-dimmer {
         width: 100%;
         height: 500px;
         flex-shrink: 0;
         background: rgba(0, 0, 0, 0.24);
         margin: 0;
         padding: 0;
-        align-items:center;
+        align-items: center;
         display: inline-flex;
         flex-direction: column;
     }
 
-    .wildlife-top{
+    .wildlife-top {
         width: 100%;
         flex-shrink: 0;
         margin: 0;
@@ -175,13 +179,14 @@
         flex-direction: row;
     }
 
-    .wildlife-site-title{
+    .wildlife-site-title {
         color: #FFF;
-        
+
         font-size: 24px;
         font-style: normal;
         font-weight: 650;
-        line-height: 150%; /* 72px */
+        line-height: 150%;
+        /* 72px */
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration-skip-ink: none;
@@ -197,7 +202,7 @@
         margin: 0;
     }
 
-    .wildlife-nav{
+    .wildlife-nav {
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
@@ -207,34 +212,37 @@
         width: 100%;
     }
 
-    .wildlife-nav-items{
+    .wildlife-nav-items {
+        color: white;
+
         /* Body text */
-        
         font-size: 13px;
         font-style: normal;
         font-weight: 500;
-        line-height: 150%; /* 30px */
+        line-height: 150%;
+        /* 30px */
 
         padding: 4px 7px;
+        margin: 0;
     }
 
-    .wildlife-page-title-container{
+    .wildlife-page-title-container {
         display: flex;
         width: 80%;
         flex-direction: column;
         align-items: center;
         gap: 30px;
-        margin:0;
+        margin: 0;
         padding: 50px 40px 0px 40px
     }
 
-    .wildlife-page-title{
+    .wildlife-page-title {
         width: 100%;
         height: 100%;
         color: #FFF;
         text-align: center;
         align-items: center;
-        
+
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -242,7 +250,7 @@
         padding: 10px;
     }
 
-    .wildlife-subtitle{
+    .wildlife-subtitle {
         width: 100%;
         height: 100%;
         color: #FFF;
@@ -250,7 +258,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -261,8 +269,8 @@
 
 /* -------------------------------------------------------------- */
 /* Small Desktop CSS */
-@media (min-width:1000px){
-    .wildlife-header{
+@media (min-width:1000px) {
+    .wildlife-header {
         width: 100%;
         height: 600px;
         flex-shrink: 0;
@@ -273,19 +281,19 @@
         display: inline-flex;
     }
 
-    .wildlife-dimmer{
+    .wildlife-dimmer {
         width: 100%;
         height: 600px;
         flex-shrink: 0;
         background: rgba(0, 0, 0, 0.24);
         margin: 0;
         padding: 0;
-        align-items:center;
+        align-items: center;
         display: inline-flex;
         flex-direction: column;
     }
 
-    .wildlife-top{
+    .wildlife-top {
         width: 100%;
         flex-shrink: 0;
         margin: 0;
@@ -295,13 +303,14 @@
         flex-direction: row;
     }
 
-    .wildlife-site-title{
+    .wildlife-site-title {
         color: #FFF;
-        
+
         font-size: 32px;
         font-style: normal;
         font-weight: 650;
-        line-height: 150%; /* 72px */
+        line-height: 150%;
+        /* 72px */
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration-skip-ink: none;
@@ -317,7 +326,7 @@
         margin: 0;
     }
 
-    .wildlife-nav{
+    .wildlife-nav {
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
@@ -327,34 +336,37 @@
         width: 100%;
     }
 
-    .wildlife-nav-items{
+    .wildlife-nav-items {
+        color: white;
+
         /* Body text */
-        
-        font-size: 15px;
+        font-size: 13px;
         font-style: normal;
         font-weight: 500;
-        line-height: 150%; /* 30px */
+        line-height: 150%;
+        /* 30px */
 
-        padding: 4px 10px;
+        padding: 4px 7px;
+        margin: 0;
     }
 
-    .wildlife-page-title-container{
+    .wildlife-page-title-container {
         display: flex;
         width: 80%;
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        margin:0;
+        margin: 0;
         padding: 80px 40px 0px 40px
     }
 
-    .wildlife-page-title{
+    .wildlife-page-title {
         width: 100%;
         height: 100%;
         color: #FFF;
         text-align: center;
         align-items: center;
-        
+
         font-size: 48px;
         font-style: normal;
         font-weight: 700;
@@ -362,7 +374,7 @@
         padding: 10px;
     }
 
-    .wildlife-subtitle{
+    .wildlife-subtitle {
         width: 100%;
         height: 100%;
         color: #FFF;
@@ -370,7 +382,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -381,8 +393,8 @@
 
 /* -------------------------------------------------------------- */
 /* Full Desktop CSS */
-@media (min-width:1500px){
-    .wildlife-header{
+@media (min-width:1500px) {
+    .wildlife-header {
         width: 100%;
         height: 500px;
         flex-shrink: 0;
@@ -393,19 +405,19 @@
         display: inline-flex;
     }
 
-    .wildlife-dimmer{
+    .wildlife-dimmer {
         width: 100%;
         height: 500px;
         flex-shrink: 0;
         background: rgba(0, 0, 0, 0.24);
         margin: 0;
         padding: 0;
-        align-items:center;
+        align-items: center;
         display: inline-flex;
         flex-direction: column;
     }
 
-    .wildlife-top{
+    .wildlife-top {
         width: 100%;
         flex-shrink: 0;
         margin: 0;
@@ -415,13 +427,14 @@
         flex-direction: row;
     }
 
-    .wildlife-site-title{
+    .wildlife-site-title {
         color: #FFF;
-        
+
         font-size: 24px;
         font-style: normal;
         font-weight: 650;
-        line-height: 150%; /* 72px */
+        line-height: 150%;
+        /* 72px */
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration-skip-ink: none;
@@ -437,7 +450,7 @@
         margin: 0;
     }
 
-    .wildlife-nav{
+    .wildlife-nav {
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
@@ -447,34 +460,37 @@
         width: 100%;
     }
 
-    .wildlife-nav-items{
-        color: #FFF;
+    .wildlife-nav-items {
+        color: white;
 
         /* Body text */
-        
-        font-size: 14px;
+        font-size: 13px;
         font-style: normal;
         font-weight: 500;
-        line-height: 150%; /* 30px */
+        line-height: 150%;
+        /* 30px */
+
+        padding: 4px 7px;
+        margin: 0;
     }
 
-    .wildlife-page-title-container{
+    .wildlife-page-title-container {
         display: flex;
         width: 80%;
         flex-direction: column;
         align-items: center;
         gap: 30px;
-        margin:0;
+        margin: 0;
         padding: 50px 40px 0px 40px
     }
 
-    .wildlife-page-title{
+    .wildlife-page-title {
         width: 100%;
         height: 100%;
         color: #FFF;
         text-align: center;
         align-items: center;
-        
+
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -482,7 +498,7 @@
         padding: 10px;
     }
 
-    .wildlife-subtitle{
+    .wildlife-subtitle {
         width: 100%;
         height: 100%;
         color: #FFF;
@@ -490,7 +506,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -501,8 +517,8 @@
 
 /* -------------------------------------------------------------- */
 /* Small Desktop CSS */
-@media (min-width:1000px){
-    .wildlife-header{
+@media (min-width:1000px) {
+    .wildlife-header {
         width: 100%;
         height: 600px;
         flex-shrink: 0;
@@ -513,19 +529,19 @@
         display: inline-flex;
     }
 
-    .wildlife-dimmer{
+    .wildlife-dimmer {
         width: 100%;
         height: 600px;
         flex-shrink: 0;
         background: rgba(0, 0, 0, 0.24);
         margin: 0;
         padding: 0;
-        align-items:center;
+        align-items: center;
         display: inline-flex;
         flex-direction: column;
     }
 
-    .wildlife-top{
+    .wildlife-top {
         width: 100%;
         flex-shrink: 0;
         margin: 0;
@@ -535,13 +551,14 @@
         flex-direction: row;
     }
 
-    .wildlife-site-title{
+    .wildlife-site-title {
         color: #FFF;
-        
+
         font-size: 32px;
         font-style: normal;
         font-weight: 650;
-        line-height: 150%; /* 72px */
+        line-height: 150%;
+        /* 72px */
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration-skip-ink: none;
@@ -557,7 +574,7 @@
         margin: 0;
     }
 
-    .wildlife-nav{
+    .wildlife-nav {
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
@@ -567,34 +584,37 @@
         width: 100%;
     }
 
-    .wildlife-nav-items{
-        color: #FFF;
+    .wildlife-nav-items {
+        color: white;
 
         /* Body text */
-        
-        font-size: 15px;
+        font-size: 13px;
         font-style: normal;
         font-weight: 500;
-        line-height: 150%; /* 30px */
+        line-height: 150%;
+        /* 30px */
+
+        padding: 4px 7px;
+        margin: 0;
     }
 
-    .wildlife-page-title-container{
+    .wildlife-page-title-container {
         display: flex;
         width: 80%;
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        margin:0;
+        margin: 0;
         padding: 80px 40px 0px 40px
     }
 
-    .wildlife-page-title{
+    .wildlife-page-title {
         width: 100%;
         height: 100%;
         color: #FFF;
         text-align: center;
         align-items: center;
-        
+
         font-size: 48px;
         font-style: normal;
         font-weight: 700;
@@ -602,7 +622,7 @@
         padding: 10px;
     }
 
-    .wildlife-subtitle{
+    .wildlife-subtitle {
         width: 100%;
         height: 100%;
         color: #FFF;
@@ -610,7 +630,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -621,8 +641,8 @@
 
 /* -------------------------------------------------------------- */
 /* Full Desktop CSS */
-@media (min-width:1500px){
-    .wildlife-header{
+@media (min-width:1500px) {
+    .wildlife-header {
         width: 100%;
         height: 720px;
         flex-shrink: 0;
@@ -633,19 +653,19 @@
         display: inline-flex;
     }
 
-    .wildlife-dimmer{
+    .wildlife-dimmer {
         width: 100%;
         height: 720px;
         flex-shrink: 0;
         background: rgba(0, 0, 0, 0.24);
         margin: 0;
         padding: 0;
-        align-items:center;
+        align-items: center;
         display: inline-flex;
         flex-direction: column;
     }
 
-    .wildlife-top{
+    .wildlife-top {
         width: 100%;
         flex-shrink: 0;
         margin: 0;
@@ -655,13 +675,14 @@
         flex-direction: row;
     }
 
-    .wildlife-site-title{
+    .wildlife-site-title {
         color: #FFF;
-        
+
         font-size: 48px;
         font-style: normal;
         font-weight: 650;
-        line-height: 150%; /* 72px */
+        line-height: 150%;
+        /* 72px */
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration-skip-ink: none;
@@ -677,7 +698,7 @@
         margin: 0;
     }
 
-    .wildlife-nav{
+    .wildlife-nav {
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
@@ -687,34 +708,37 @@
         width: 100%;
     }
 
-    .wildlife-nav-items{
+    .wildlife-nav-items {
+        color: white;
+
         /* Body text */
-        
-        font-size: 20px;
+        font-size: 13px;
         font-style: normal;
         font-weight: 500;
-        line-height: 150%; /* 30px */
+        line-height: 150%;
+        /* 30px */
 
-        padding: 5px 12px;
+        padding: 4px 7px;
+        margin: 0;
     }
 
-    .wildlife-page-title-container{
+    .wildlife-page-title-container {
         display: flex;
         width: 800px;
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        margin:0;
+        margin: 0;
         padding: 134px 100px 259px 100px
     }
 
-    .wildlife-page-title{
+    .wildlife-page-title {
         width: 100%;
         height: 100%;
         color: #FFF;
         text-align: center;
         align-items: center;
-        
+
         font-size: 64px;
         font-style: normal;
         font-weight: 700;
@@ -722,7 +746,7 @@
         padding: 10px;
     }
 
-    .wildlife-subtitle{
+    .wildlife-subtitle {
         width: 100%;
         height: 100%;
         color: #FFF;
@@ -730,7 +754,7 @@
         align-items: center;
 
         /* Subheading */
-        
+
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
