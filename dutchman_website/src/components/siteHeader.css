@@ -1,0 +1,189 @@
+/* .site-header {
+    width: 100%;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+
+    background: lightgray 50% / cover no-repeat;
+} */
+
+.site-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.site-dimmer {
+    width: 100%;
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.24);
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.site-top {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* TITLE (matches both wildlife + creeks behavior) */
+.site-title {
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+
+    font-size: 32px;
+    font-weight: 650;
+    line-height: 150%;
+
+    padding: 30px 0px 15px 0px;
+    margin: 0;
+}
+
+/* NAV */
+.site-nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.site-nav-item {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+
+    background: #2F5848;
+    white-space: nowrap;
+    border-radius: 10px;
+    border: 1px solid #2F5848;
+
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+
+    padding: 4px 8px;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.site-nav-item:hover {
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.site-nav-item:active {
+    transform: translateY(1px);
+}
+
+/* PAGE TITLE AREA */
+.site-page-title-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.site-page-title {
+    color: #FFF;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.site-subtitle {
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (min-width: 575px) {
+    .site-title {
+        font-size: 24px;
+        justify-content: flex-start;
+        padding: 60px 10px 0px 10px;
+    }
+
+    .site-nav {
+        justify-content: flex-end;
+        padding: 60px 10px 0px 0px;
+        gap: 10px;
+    }
+
+    .site-top {
+        flex-direction: row;
+    }
+
+    .site-nav-item {
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 1000px) {
+    .site-title {
+        font-size: 32px;
+        padding: 46px 0px 46px 40px;
+        justify-content: flex-start;
+    }
+
+    .site-nav {
+        justify-content: flex-end;
+        padding: 50px 40px 40px 0px;
+        gap: 25px;
+    }
+
+    .site-nav-item {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .site-page-title-container {
+        width: 80%;
+        padding: 50px 40px 0px 40px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .site-title {
+        font-size: 48px;
+        padding: 46px 80px;
+    }
+
+    .site-nav {
+        gap: 32px;
+        padding: 50px 80px 40px 0px;
+    }
+
+    .site-nav-item {
+        font-size: 13px;
+    }
+
+    .site-page-title {
+        font-size: 64px;
+    }
+
+    .site-subtitle {
+        font-size: 24px;
+    }
+}
