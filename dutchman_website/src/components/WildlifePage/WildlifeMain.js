@@ -3,6 +3,7 @@ import "./WildlifeMain.css";
 export default function Main() {
     return (
         <div className='wildlife-main-container'>
+
             <h1 className='wildlife-overview-title'>
                 Overview
             </h1>

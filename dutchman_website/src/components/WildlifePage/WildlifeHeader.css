@@ -90,6 +90,7 @@
 
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    flex-shrink: 0;
 
 }
 
@@ -223,7 +224,8 @@
         /* 30px */
 
         padding: 4px 7px;
-        margin: 0;
+        flex-shrink: 0;
+        /* margin: 0; */
     }
 
     .wildlife-page-title-container {
@@ -348,6 +350,7 @@
 
         padding: 4px 7px;
         margin: 0;
+        flex-shrink: 0;
     }
 
     .wildlife-page-title-container {
@@ -472,6 +475,7 @@
 
         padding: 4px 7px;
         margin: 0;
+        flex-shrink: 0;
     }
 
     .wildlife-page-title-container {
@@ -596,6 +600,7 @@
 
         padding: 4px 7px;
         margin: 0;
+        flex-shrink: 0;
     }
 
     .wildlife-page-title-container {
@@ -720,6 +725,7 @@
 
         padding: 4px 7px;
         margin: 0;
+        flex-shrink: 0;
     }
 
     .wildlife-page-title-container {
@@ -760,5 +766,26 @@
         font-weight: 400;
         margin: 0;
         padding: 10px;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* Wildlife nav size correction */
+
+@media (min-width:1000px) {
+    .wildlife-nav-items {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
+
+@media (min-width:1500px) {
+    .wildlife-nav {
+        gap: var(--Spacing-M, 48px);
+    }
+
+    .wildlife-nav-items {
+        font-size: 20px;
+        padding: 5px 15px;
     }
 }
